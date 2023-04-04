@@ -1,6 +1,5 @@
 import React, { useEffect, useState} from 'react';
 import ListItem from '../ListItem/ListItem';
-
 import Placeholder from '../Placeholder/Placeholder';
 import './List.css'
 import toDoList from '../../lib/data/list';
@@ -65,12 +64,11 @@ export default function List() {
 
     
   useEffect(() => {
- if(list.length > 0){
+ if(list === null || list.length === 0){
+    checklist()
+ }else{
     updateItem()
  }
-    return () => {
-        checklist()
-    }
   },)
   
     
@@ -99,7 +97,7 @@ function updateItem(){
         //compare time now minutes and due date setup time minutes 
         
         if(list[i].date === timeV2 ){
-           return setTxt("You have minute to complete your task");
+           return setTxt(`You have one minute to complete your ${list[i].text} task hurry up!!!`);
         }
        
         if(list[i].date === timeV){
@@ -135,7 +133,7 @@ function updateItem(){
         </ul>
       </div>
       <div>
-      <p style={{color:"white"}}>{txt}</p>
+      <p className='warning'>{txt}</p>
       </div>
    
         

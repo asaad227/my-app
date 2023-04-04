@@ -17,6 +17,24 @@
     color: gold;
     font-family: "Play-fair Display";
   }
+  .warning{
+    font-family: "Play-fair Display";
+    font-size: medium;
+    font-weight: bold;
+    font-style: oblique;
+    text-align: center;
+    color: #ebf0e3;
+    padding-bottom: 10px;
+    animation-name: textResult;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+ 
+  
+  @keyframes textResult {
+    from {color: #ebf0e3;;}
+    to {color: rgb(255, 0, 0);}
+  }
   .todoItems {
     height: 85%;
     /* padding: 20px 0px; */
