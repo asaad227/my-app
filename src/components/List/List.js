@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react';
+import React, {  useState} from 'react';
 import ListItem from '../ListItem/ListItem';
 import Placeholder from '../Placeholder/Placeholder';
 import './List.css'
@@ -63,13 +63,9 @@ export default function List() {
     }
 
     
-  useEffect(() => {
- if(list === null || list.length === 0){
-    checklist()
- }else{
-    updateItem()
- }
-  },)
+ 
+
+  
   
     
 
@@ -122,7 +118,11 @@ function updateItem(){
                        
     }
   
-      
+    if(list === null || list.length === 0){
+        checklist()
+     }else{
+        updateItem()
+     }
    
     return (
         <div className="List">
