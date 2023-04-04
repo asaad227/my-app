@@ -1,0 +1,13 @@
+.placeHolder {
+    font-family: "Roboto";
+    font-style: oblique;
+    color: white;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.placeHolder:hover{
+    color: gold;
+   
+
+}

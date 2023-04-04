@@ -1,0 +1,41 @@
+
+
+.todoItems ul li {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: large;
+  }
+
+  .timeStamp{
+    font-weight: bold;
+font-size: xx-small;
+justify-content: flex-start;
+color: rgb(28, 213, 238);
+  }
+.textItem{
+  padding: 10px;
+  justify-content: flex-start;
+}
+  
+  
+  .todoItems ul li:not(:last-of-type) {
+    margin-bottom: 5px;
+  }
+  
+  .todoItems ul li input {
+    /* display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle; */
+    transform: scale(1.5);
+  }
+  
+  .todoItems ul li input:checked {
+    background-color: #8FC93A;
+    border: 1px solid red;
+  }

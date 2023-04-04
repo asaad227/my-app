@@ -1,0 +1,43 @@
+footer {
+    color: #fff;
+
+  }
+  
+  .container {
+    display: block;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .containerChange {
+    display: block;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+ .footerP{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container, .containerChange, p {
+    margin: 0;
+  }
+  
+ .footerUl {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .footerLi {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
