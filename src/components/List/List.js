@@ -22,7 +22,7 @@ export default function List() {
             date:val,
             checked: false
         }
-        if (list.length === 0) {
+        if (list === null ||list.length === 0) {
             newList = [];
         } else {
             newList = [...list];
@@ -55,7 +55,7 @@ export default function List() {
         }, 1000)
     }
     function checklist() {
-        if (list.length === 0) {
+        if (list === null ||list.length === 0) {
             return <Placeholder/>
         } else {
             return  list.map((item, index) => <ListItem checkStatus={item.checked} deleteHandler={removeFromList} index={index} key={index} text={item.text} dateView={item.date}></ListItem>)
@@ -63,11 +63,11 @@ export default function List() {
     }
 
     useEffect(() => {
-        if(list.length > 0){
+        if(list !== null){
            updateItem()
         }
            return () => {
-               checklist()
+            checklist()
            }
          },)
 
