@@ -1,5 +1,6 @@
 import React, { useEffect, useState} from 'react';
 import ListItem from '../ListItem/ListItem';
+
 import Placeholder from '../Placeholder/Placeholder';
 import './List.css'
 import toDoList from '../../lib/data/list';
@@ -10,7 +11,7 @@ export default function List() {
     const [listInput, setListInput] = useState("");
     const [list, setList] = useState(toDoList);
     const [val, setVal] = useState("");
-    const [txt, setTxt] = useState("");
+    const [txt, setTxt] = useState();
     // const [show, setShow] = useState();
 
     function addToList() {
@@ -22,7 +23,7 @@ export default function List() {
             date:val,
             checked: false
         }
-        if (list === null ||list.length === 0) {
+        if (list === null || list.length === 0) {
             newList = [];
         } else {
             newList = [...list];
@@ -55,23 +56,26 @@ export default function List() {
         }, 1000)
     }
     function checklist() {
-        if (list === null ||list.length === 0) {
+        if (list === null || list.length === 0) {
             return <Placeholder/>
         } else {
             return  list.map((item, index) => <ListItem checkStatus={item.checked} deleteHandler={removeFromList} index={index} key={index} text={item.text} dateView={item.date}></ListItem>)
         }
     }
 
-    useEffect(() => {
-        if(list !== null){
-           updateItem()
-        }
-           return () => {
-            checklist()
-           }
-         },)
+    
+  useEffect(() => {
+ if(list !== null || list.length !== 0 ){
+    updateItem()
+ }
+    return () => {
+        checklist()
+    }
+  },)
+  
+    
 
-
+   
 function updateItem(){
     let currentDate = new Date();
     // casting the dateobject to use general purpose.
@@ -95,10 +99,10 @@ function updateItem(){
         //compare time now minutes and due date setup time minutes 
         
         if(list[i].date === timeV2 ){
-           setTxt(`You have one minute to complete your ${list[i].text} task hurry up!!!`);
-        }else{
-            setTxt("")
-        }
+            setTxt(`You have one minute to complete your ${list[i].text} task hurry up!!!`);
+         }else{
+             setTxt("")
+         }
        
         if(list[i].date === timeV){
             //if match list checked property will change to true
@@ -115,24 +119,21 @@ function updateItem(){
                 setList(finalList);
             }, 2000)
         }
-        // keep inside the loop txt will stay upto list length when list update txt update
        
        
+        
 }
-                   
+                       
     }
-
-
-   
   
-  
+      
    
     return (
         <div className="List">
         
       <div className="todoItems">
         <ul>
-            {checklist()}
+            { checklist() }
         </ul>
       </div>
       <div>
