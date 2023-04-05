@@ -62,6 +62,15 @@ export default function List() {
         }
     }
 
+    useEffect(() => {
+        if(list.length > 0){
+           updateItem()
+        }
+           return () => {
+               checklist()
+           }
+         },)
+
 
 function updateItem(){
     let currentDate = new Date();
@@ -114,15 +123,7 @@ function updateItem(){
     }
 
 
-    useEffect(()=>{
-        function listCheck(){
-            if(list.length=== 0){
-              checklist()
-            } else{
-              updateItem()}
-            }
-            listCheck()
-    })
+   
   
   
    
