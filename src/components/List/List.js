@@ -1,4 +1,4 @@
-import React, {  useState} from 'react';
+import React, { useEffect, useState} from 'react';
 import ListItem from '../ListItem/ListItem';
 import Placeholder from '../Placeholder/Placeholder';
 import './List.css'
@@ -10,7 +10,7 @@ export default function List() {
     const [listInput, setListInput] = useState("");
     const [list, setList] = useState(toDoList);
     const [val, setVal] = useState("");
-    const [txt, setTxt] = useState();
+    const [txt, setTxt] = useState("");
     // const [show, setShow] = useState();
 
     function addToList() {
@@ -22,7 +22,7 @@ export default function List() {
             date:val,
             checked: false
         }
-        if (list === null || list.length === 0) {
+        if (list.length === 0) {
             newList = [];
         } else {
             newList = [...list];
@@ -55,21 +55,14 @@ export default function List() {
         }, 1000)
     }
     function checklist() {
-        if (list === null || list.length === 0) {
+        if (list.length === 0) {
             return <Placeholder/>
         } else {
             return  list.map((item, index) => <ListItem checkStatus={item.checked} deleteHandler={removeFromList} index={index} key={index} text={item.text} dateView={item.date}></ListItem>)
         }
     }
 
-    
- 
 
-  
-  
-    
-
-   
 function updateItem(){
     let currentDate = new Date();
     // casting the dateobject to use general purpose.
@@ -93,7 +86,9 @@ function updateItem(){
         //compare time now minutes and due date setup time minutes 
         
         if(list[i].date === timeV2 ){
-           return setTxt(`You have one minute to complete your ${list[i].text} task hurry up!!!`);
+           setTxt(`You have one minute to complete your ${list[i].text} task hurry up!!!`);
+        }else{
+            setTxt("")
         }
        
         if(list[i].date === timeV){
@@ -113,23 +108,30 @@ function updateItem(){
         }
         // keep inside the loop txt will stay upto list length when list update txt update
        
-        
+       
 }
-                       
+                   
     }
+
+
+    useEffect(()=>{
+        function listCheck(){
+            if(list.length=== 0){
+              checklist()
+            } else{
+              updateItem()}
+            }
+            listCheck()
+    })
   
-    if(list === null || list.length === 0){
-        checklist()
-     }else{
-        updateItem()
-     }
+  
    
     return (
         <div className="List">
         
       <div className="todoItems">
         <ul>
-            { checklist() }
+            {checklist()}
         </ul>
       </div>
       <div>
