@@ -5,20 +5,15 @@
     height: 95vh;
     width: 50vh;
     box-shadow: 1px 0px 6px rgba(0,0,0,0.5);
-    
     padding: 10px;
-    
-    /* background-color: white;
-    position: absolute;
-    top: 0;
-    left: 0; */
+
   }
   .label-todo, .label-reminder{
     color: gold;
-    font-family: "Play-fair Display";
+    font-family: "Delicious Handrawn";
   }
   .warning{
-    font-family: "Play-fair Display";
+    font-family: "Delicious Handrawn";
     font-size: medium;
     font-weight: bold;
     font-style: oblique;
@@ -36,8 +31,12 @@
     to {color: rgb(255, 0, 0);}
   }
   .todoItems {
+    display: "block";
     height: 85%;
-    /* padding: 20px 0px; */
+    padding: 20px 0px;
+  }
+  .todoHide{
+    display: none;
   }
   
   .todoItems ul {
@@ -51,27 +50,32 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 20%;
     border-top: 1px solid gold;
   }
   
   .todoInput input {
-    padding-left: 5px;
     text-align: center;
     height: 85%;
     width: 80%;
     border: none;
     outline: none;
     border-radius: 5px;
-   margin: 5px;
-    /* border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px; */
-   
+    padding: 7px 0px;
+    margin-top: 5px;
+    font-family: "Delicious Handrawn";
     
   }
+.displayDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 0px;
+}
   
-  .todoInput button {
-    font-family: "Play-fair Display";
+
+  .btn1{
+    font-family: "Delicious Handrawn";
+    margin-top: 67px;
     width: 80%;
     height: 100%;
     border:none;
@@ -81,11 +85,45 @@
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 5px;
-    margin: 5px;
-    /* border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px; */
- 
+    animation-name: inputBtn;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
   
+  }
+  .btn2{
+    font-family: "Delicious Handrawn";
+    width: 80%;
+    height: 100%;
+    border:none;
+    cursor: pointer;
+    background-color: #8FC93A;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    animation-name: inputBtn;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  
+  }
+
+  @keyframes inputBtn {
+    from {color: #ebf0e3;;}
+    to {color: rgb(255, 0, 0);}
+  }
+  
+  .todoInput button {
+    font-family: "Delicious Handrawn";
+    width: 80%;
+    height: 100%;
+    border:none;
+    cursor: pointer;
+    background-color: #8FC93A;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin: 10px 0px;
   }
 
   .todoInput input:hover{
@@ -96,3 +134,6 @@
   .todoInput button:hover{
     color:red;
   }
+
+
+ 

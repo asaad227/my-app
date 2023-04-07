@@ -1,6 +1,7 @@
 
 
 .todoItems ul li {
+  font-family: "Delicious Handrawn";
     display: flex;
     flex-direction: row;
     width: 90%;
@@ -10,6 +11,7 @@
     color: white;
     cursor: pointer;
     font-size: large;
+    margin-left: 20px;
   }
 
   .timeStamp{
@@ -24,7 +26,7 @@ color: rgb(28, 213, 238);
 }
   
   
-  .todoItems ul li:not(:last-of-type) {
+  .todoItems ul {
     margin-bottom: 5px;
   }
   

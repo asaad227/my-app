@@ -12,9 +12,9 @@ function dateAndTime(){
 
 
     return (
-    
-        <li><input type="checkbox" checked={checkStatus} onChange={deleteHandler.bind(null, index)}></input><div className='textItem'><p>{text}</p> <p className='timeStamp'> {dateAndTime()}</p></div></li>
-      
+    <ul className='ul-list'>
+        <li><input type="checkbox" checked={checkStatus} onChange={deleteHandler.bind(null, index)} placeholder='checkbox'/><div className='textItem'><p>{text}</p> <p className='timeStamp'> {dateAndTime()}</p></div></li>
+        </ul>
       
     )
 }

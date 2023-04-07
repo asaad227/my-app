@@ -17,6 +17,8 @@ function App() {
       setTime(time)
        setTimeout(showTime, 1000)
       }
+
+    
   return (
     <div className='app'>
       <h5 className='digiClock'>{date} {time}</h5>

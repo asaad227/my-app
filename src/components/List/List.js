@@ -1,19 +1,19 @@
 import React, { useEffect, useState} from 'react';
 import ListItem from '../ListItem/ListItem';
-
 import Placeholder from '../Placeholder/Placeholder';
 import './List.css'
-import toDoList from '../../lib/data/list';
+import PostTodo from '../../lib/data/list';
 
 // import Footer from '../Footer/indx';
 
 export default function List() {
     const [listInput, setListInput] = useState("");
-    const [list, setList] = useState(toDoList);
     const [val, setVal] = useState("");
     const [txt, setTxt] = useState();
-    // const [show, setShow] = useState();
-
+    const [show, setShow] = useState();
+    const [list, setList] = useState()
+ 
+console.log(list.text);
     function addToList() {
         let newList=[];
         // Output: Sat Apr 01 2023 01:53:25
@@ -30,14 +30,16 @@ export default function List() {
         }
         //this if clause not going to allow anymore txt to added to the list when list
         // less then 6.
-        if(list.length < 6){
-            newList.push(newListItem);
-            localStorage.setItem('toDoList', JSON.stringify(newList));
-            setList(newList);
-            setListInput("")
-        }else{
-            return alert("Maximum number of entries!!!");
-        }
+       if(list.length > 5){
+       alert("Maximum entry entered. Please delete one then add one!!")
+       }else{
+        newList.push(newListItem);
+        <PostTodo todo={newList}/>;
+        setList(newList);
+        setListInput("")
+       }
+           
+       
       
        
     }
@@ -65,12 +67,11 @@ export default function List() {
 
     
   useEffect(() => {
- if(list !== null || list.length !== 0 ){
+ if(list === null || list.length === 0){
+    checklist()
+ }else{
     updateItem()
  }
-    return () => {
-        checklist()
-    }
   },)
   
     
@@ -131,25 +132,30 @@ function updateItem(){
     return (
         <div className="List">
         
+        
       <div className="todoItems">
-        <ul>
-            { checklist() }
-        </ul>
+        
+        { checklist() }
+       
       </div>
       <div>
       <p className='warning'>{txt}</p>
       </div>
+     
    
-        
-      <form className="todoInput" onSubmit={addToList}>
+      <form className={!show?"todoInput":"todoHide"} >
       <h4 className='label-todo'>ToDo List</h4>
-        <input onChange={e => setListInput(e.target.value)} value={listInput} type="text" />
+        <input onChange={e => setListInput(e.target.value)} value={listInput} type="text" placeholder='Enter your todo here ...' />
         
-        <h4 className='label-reminder'>Set Reminder</h4>
-        <input onChange={e => setVal(e.target.value)} value={val} type="datetime-local" />
+        <h4 className='label-reminder'>Add Reminder</h4>
+        <input onChange={e => setVal(e.target.value)} value={val} type="datetime-local" placeholder='date and time' />
         
-        <button>Add</button>
+        <button onClick={addToList} type='submit'>Add</button>
+        
         </form>
+        <div className="displayDiv">
+            <button onClick={()=> setShow(!show)} className={!show?'btn2':'btn1'}> {!show? "Hide Input":"Click here to Add to do"}</button>
+        </div>
     </div>
     )
 }
