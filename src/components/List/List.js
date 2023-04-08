@@ -20,79 +20,69 @@ async function getApi(){
       let data = await response.json();
      setList(data)
 }
-
+function addToList() {
+    if(list.length > 5){
+    alert("Maximum entry entered. Please delete one then add one!!")
+    }else{
+     setTxt({text:listInput[0].toUpperCase()+listInput.slice(1), 
+     time:val, 
+     checked:false})
+     fetchPostTodo()
+     setListInput("")
+    }  
+ }
 async function fetchPostTodo() {
-    let response = await fetch(`/.netlify/functions/post_todoList`, {
+   let response = await fetch(`/.netlify/functions/post_todoList`, {
       method: "POST",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({text:listInput[0].toUpperCase()+listInput.slice(1), time:val, checked:false}),
+      body: JSON.stringify({text:listInput[0].toUpperCase()+listInput.slice(1), 
+        time:val, 
+        checked:false}),
     });
-    let data = await response.json();
-    console.log("post data", data);
+    return  await response.json();
+ 
   }
 
-
-function addToList(index) {
-    //as this will send the list to the database so fetchPostTodo execute here
-        fetchPostTodo()
-        // Output: Sat Apr 01 2023 01:53:25
-        //this if clause not going to allow anymore txt to added to the list when list
-        // less then 6.
-       if(list.length > 5){
-       alert("Maximum entry entered. Please delete one then add one!!")
-       }else{
-        setTxt({text:listInput[0].toUpperCase()+listInput.slice(1), time:val, checked:false});
-        setListInput("")
-       }
-           
-       
-      
-       
-    }
-
     async function removeFromList(index) {
-        //spreeding the list
-        const newList = [...list]
-        // newList index not equal to checked 
-        newList[index].checked = !newList[index].checked;
-        let response = await fetch(`/.netlify/functions/delete_todoList`, {
-            method: "DELETE",
-            body: JSON.stringify({_id:txt[index]}),
-          });
-          let data = await response.json();
-          console.log("delete data", data);
-        setTxt(newList)
-        //useing setTimeout to clear the checkbox after 1sec
-        setTimeout(() => {
-            const finalList = newList.filter(el => !el.checked);
+     const delTodo ={
+        text: list[index].text,
+        time:list[index].time,
+        checked:list[index].checked
+     }
+     console.log(delTodo);
+            let response = await fetch(`/.netlify/functions/delete_todoList`, {
+                method: "DELETE",
+                body:JSON.stringify(delTodo)
+              });
+             const data = await response.json();
+             console.log(delTodo, "del", data);
+             const newList = [...list]
+             // newList index not equal to checked 
+             newList[index].checked = !newList[index].checked;
+             const finalList = newList.filter(el => el.checked);
             setTxt(finalList);
-           
-        }, 1000)
-
-        setTimeout(() => {
-           getApi()
-           
-        }, 2000)
+            setTimeout(()=>{
+                getApi()
+             },1000)
+      
     }
+
     function checklist() {
         if (list === null || list.length === 0) {
             return <Placeholder/>
         } else {
+           
             return  list.map((item, index) => <ListItem checkStatus={item.checked} deleteHandler={removeFromList} index={index} key={index} text={item.text} dateView={item.time}></ListItem>)
         }
     }
 
-    
-  useEffect(() => {
-    getApi()
- 
-  },[])
-  
-      console.log("I am list", list);
-   
+useEffect(()=>{
+        getApi()
+},[])
+
     return (
         <div className="List">
         
