@@ -64,6 +64,7 @@ async function fetchPostTodo() {
              newList[index].checked = !newList[index].checked;
              const finalList = newList.filter(el => el.checked);
             setTxt(finalList);
+            console.log(txt);
             setTimeout(()=>{
                 getApi()
              },1000)
