@@ -42,7 +42,9 @@ async function fetchPostTodo() {
         time:val, 
         checked:false}),
     });
-    return  await response.json();
+    await response.json();
+    
+    getApi()
  
   }
 
