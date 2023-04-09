@@ -2,6 +2,7 @@ import React, { useEffect, useState} from 'react';
 import ListItem from '../ListItem/ListItem';
 import Placeholder from '../Placeholder/Placeholder';
 import './List.css'
+import Menu from '../Menu';
 
 
 // import Footer from '../Footer/indx';
@@ -43,7 +44,7 @@ async function fetchPostTodo() {
         checked:false}),
     });
     await response.json();
-    
+
     getApi()
  
   }
@@ -87,6 +88,8 @@ useEffect(()=>{
 },[])
 
     return (
+        <div>
+        <Menu/>
         <div className="List">
         
         
@@ -114,6 +117,7 @@ useEffect(()=>{
         <div className="displayDiv">
             <button onClick={()=> setShow(!show)} className={!show?'btn2':'btn1'}> {!show? "Hide Input":"Click here to Add to do"}</button>
         </div>
+    </div>
     </div>
     )
 }
