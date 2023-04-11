@@ -19,7 +19,7 @@ export default function Menu() {
     <div className="Menu">
     <div id="myNav" className="overlay">
       <a
-        href="/list"
+        href="/home"
         className="closebtn"
         aria-label="close button"
         onClick={closeNav}
@@ -27,11 +27,11 @@ export default function Menu() {
         &times;
       </a>
     <div className="overlay-content">
-    <Link to="/profile" aria-label="profile">
+    <Link to="/profile" aria-label="Profile">
       Profile
     </Link>
-    <Link to="/" aria-label="list">
-    My Todo
+    <Link to="/home" aria-label="home">
+    My ToDo 
     </Link>
     <SignOutButton />
   </div>
