@@ -1,30 +1,27 @@
-// import { useState,useEffect } from 'react';
-import List from '../List/List';
-import './App.css';
+import "./App.css";
+import { SignInPage } from "../SignInPage";
+import { Routes, Route} from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
+import Home from "../Home";
+import Profile from "../Profile";
+
 
 function App() {
-  // const [time, setTime] = useState();
-  // const [date, setDate]= useState();
+  const { isAuthenticated } = useAuth0();
 
-//   useEffect(()=>{
-//     showTime()
-// })
-    // function showTime(){
-    //     let currentDate = new Date();
-    //     let time= currentDate.toLocaleTimeString()
-    //     let date = currentDate.toDateString()
-    //   setDate(date) 
-    //   setTime(time)
-    //    setTimeout(showTime, 1000)
-    //   }
-
-    
   return (
-    <div className='app'>
-      {/* <h5 className='digiClock'>{date} {time}</h5> */}
-      <List />
+    <div className="App">
+      <Routes>
+        <Route
+          path="/"
+          element={!isAuthenticated? <SignInPage /> : <Home />}
+        />
+        <Route
+          path="/profile"
+          element={!isAuthenticated? <SignInPage /> : <Profile />}
+        />
+      </Routes>
     </div>
-   
   );
 }
 

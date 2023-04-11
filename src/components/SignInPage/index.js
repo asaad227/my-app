@@ -1,0 +1,17 @@
+import React from 'react'
+import SignInButton from '../SignInButton';
+import './SignInPage.css'
+
+
+export function SignInPage() {
+    
+
+    return (
+    <div className="SignInPage">
+      <h3 className="welcome-title"> Welcome to </h3>
+      <h1 className="name-app"> My Todo </h1>
+        <SignInButton/>
+     
+    </div>
+    )
+}
