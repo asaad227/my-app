@@ -1,23 +1,15 @@
-.digiClock{
-  font-family: "Play-fair Display";
-  margin-top: 10px;
-  text-align: center;
-  color: gold;
-}
+
 .List {
   display: flex;
   flex-direction: column;
     height: 95vh;
     width: 50vh;
     box-shadow: 1px 0px 6px rgba(0,0,0,0.5);
-    /* padding: 10px; */
+    padding: 10px;
 
   }
-
-  
   .label-todo, .label-reminder{
     color: gold;
-    text-align: center;
     font-family: "Delicious Handrawn";
   }
   .warning{
@@ -41,7 +33,7 @@
   .todoItems {
     display: "block";
     height: 85%;
-    padding: 5px 0px;
+    padding: 20px 0px;
   }
   .todoHide{
     display: none;
@@ -60,7 +52,6 @@
     align-items: center;
     border-top: 1px solid gold;
   }
-
   
   .todoInput input {
     text-align: center;
@@ -89,7 +80,7 @@
     height: 100%;
     border:none;
     cursor: pointer;
-    background-color: #8FC93A;
+    background-color: #c3de9b;
     color: white;
     font-weight: bold;
     text-transform: uppercase;
@@ -105,7 +96,7 @@
     height: 100%;
     border:none;
     cursor: pointer;
-    background-color: #8FC93A;
+    background-color: #c3de9b;
     color: white;
     font-weight: bold;
     text-transform: uppercase;
@@ -116,17 +107,11 @@
   
   }
 
-  @keyframes inputBtn {
-    from {color: #ebf0e3;;}
-    to {color: rgb(255, 0, 0);}
-  }
-
   .delBtn{
     font-family: "Delicious Handrawn";
     width: 80%;
     height: 100%;
     border:none;
-    margin-top: 10px;
     cursor: pointer;
     background-color: #c93a3a;
     color: white;
@@ -140,6 +125,10 @@
     background-color: white;
   }
 
+  @keyframes inputBtn {
+    from {color: #ebf0e3;;}
+    to {color: rgb(16, 15, 15);}
+  }
   
   .todoInput button {
     font-family: "Delicious Handrawn";
@@ -161,7 +150,8 @@
   }
 
   .todoInput button:hover{
-    color:red;
+    background-color:white;
+    color:  green;
   }
 
 

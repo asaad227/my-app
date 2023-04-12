@@ -1,53 +1,41 @@
 import React from 'react'
-import "./Menu.css"
+import "./index.css"
 import { Link } from 'react-router-dom'
 import SignOutButton from '../SignOutButton'
-import { RiHomeSmileLine } from "react-icons/ri";
-import { MdOutlineFavoriteBorder } from "react-icons/md";
 export default function Menu() {
+
   function openNav() {
-    if (document.getElementById("myNav")) {
-      document.getElementById("myNav").style.width = "100%";
-    }
+      document.getElementById("mySidepanel").style.width = "200px";
+      document.getElementById("mySidepanel").style.height = "700px";
   }
-
-  function closeNav(event) {
-    if (document.getElementById("myNav")) {
-      event.preventDefault();
-      document.getElementById("myNav").style.width = "0%";
+    function closeNav() {
+      document.getElementById("mySidepanel").style.width = "0";
     }
-  }
-  return (
-    <div className="menu">
-     <div id="myNav" className="overlay">
-    <a
-    href="/home"
-    className="closebtn"
-    aria-label="close button"
-        onClick={closeNav}
-      >
-       &times;
-       </a> 
-    <div className="overlay-content">
-    <Link to="/profile" aria-label="Profile">
-      Profile
-    </Link>
-    <Link to="/home" aria-label="home">
-    My ToDo 
-    </Link>
-    <Link className='navList' to="/asian">
-       Recipe Collection
-          </Link>
-        <Link to="/fav">
-         Fav-recipe
-          </Link>
-    <SignOutButton />
-  </div>
-  </div>
+return (
+    <div > 
+  <div  className='sidepanel' id="mySidepanel">
 
-  <i id='menuIcon' onClick={openNav} icon="fa-solid fa-bars" >Menu</i>
-    </div>
+<Link to='#' className='closebtn' onClick={closeNav}>
+<i className="fa fa-caret">X</i></Link>
+     
+      <Link to="/home">
+          <li><i className="fa"></i>My Todo</li>
+          </Link>
+          <Link to="/">
+          <li><i className="fa"></i>Profile</li>
+          </Link>
+          <Link to="/asian">
+          <li><i className="fa"></i>Recipe</li>
+          </Link>
+          <Link to="/fav">
+          <li><i className="fa"></i>Fav-Recipe</li>
+          </Link>
+ <SignOutButton/>
+  </div>
+  <button className="openbtn" onClick={openNav}>
+  <i className='fa'>☰</i></button>  
 
-  )
+  </div>
+)
 }
 

@@ -2,11 +2,10 @@ import "./App.css";
 import { SignInPage } from "../SignInPage";
 import { Routes, Route} from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
-import Home from "../Home";
 import Asian from "../Asian";
 import Profile from "../Profile";
 import Fav from "../Fav/Fav";
-
+import Home from "../Home";
 
 function App() {
   const { isAuthenticated } = useAuth0();
@@ -15,25 +14,20 @@ function App() {
     <div className="App">
       <Routes>
         <Route
-          path="/"
-          element={!isAuthenticated? <SignInPage />: <Profile/>}
-        />
-         <Route
           path="/home"
-          element={isAuthenticated && <Home />}
+          element={ <Home />}
         />
         <Route
-          path="/profile"
-          element={isAuthenticated && <Profile />}
+          path="/"
+          element={isAuthenticated ? <Profile /> : <SignInPage />}
         />
-         <Route
+        <Route
           path="/asian"
-          element={isAuthenticated && <Asian />}
+          element={<Asian />}
         />
-
-<Route
+        <Route
           path="/fav"
-          element={isAuthenticated && <Fav />}
+          element={<Fav />}
         />
       </Routes>
     </div>

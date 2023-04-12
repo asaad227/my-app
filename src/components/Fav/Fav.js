@@ -1,9 +1,11 @@
 
 import React, { useEffect, useState} from 'react';
 import { RiDeleteBin5Line } from "react-icons/ri";
-import Menu from '../Menu';
+import Menu from '../Menu/index';
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Fav() {
+  const { isAuthenticated } = useAuth0();
   const [toggle, setToggle] = useState(false)
   const [data, setData] = useState(() => {
     const storedList = localStorage.getItem("myFav");
@@ -39,7 +41,9 @@ export default function Fav() {
 
    
 //data? will take care of, if nothing on fav list it will show empty page
-  return (<div className='App'>
+//isAuthenticated will checked user allow to use this page 
+  return (
+  isAuthenticated &&<div className='App'>
   <Menu/>
   <div className='flex-container'>
   {data.map((e, index)=> <section className='flex-box' key={index}><h4 className='label'>{e.recipe.label}</h4>
