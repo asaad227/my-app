@@ -9,9 +9,8 @@ import { BrowserRouter } from 'react-router-dom';
 ReactDOM.render(
   <BrowserRouter>
   <Auth0Provider
-    domain="dev-tctcmjtz.us.auth0.com"
-    clientId="x4Y91AlSQS6W4F7wMin195kLS4OWtlR3"
-     audience="https://dev-tctcmjtz.us.auth0.com/api/v2/"
+    domain={process.env.REACT_APP_AUTH0_DOMAIN}
+   clientId={process.env.REACT_APP_AUTH0_CLIENT_ID}
     authorizationParams={{
       redirect_uri: window.location.origin
     }}

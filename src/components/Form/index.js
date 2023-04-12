@@ -3,7 +3,7 @@ import "../List/List.css"
 
 export default function Form({addToList, show, setListInput, listInput, setVal, val}) {
   return (
-    <div>  <form onSubmit={addToList} className={!show?"todoInput":"todoHide"} >
+    <form onSubmit={addToList} className={!show?"todoInput":"todoHide"} >
     <h4 className='label-todo'>ToDo List</h4>
       <input onChange={e => setListInput(e.target.value)} value={listInput} type="text" placeholder='Enter your todo here ...' />
       
@@ -12,6 +12,6 @@ export default function Form({addToList, show, setListInput, listInput, setVal, 
       
       <button>Add</button>
       
-      </form></div>
+      </form>
   )
 }

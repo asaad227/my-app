@@ -16,16 +16,16 @@ export default function Menu() {
     }
   }
   return (
-    <div className="Menu">
-    <div id="myNav" className="overlay">
-      <a
-        href="/home"
-        className="closebtn"
-        aria-label="close button"
+    <div className="menu">
+     <div id="myNav" className="overlay">
+    <a
+    href="/home"
+    className="closebtn"
+    aria-label="close button"
         onClick={closeNav}
       >
-        &times;
-      </a>
+       &times;
+       </a> 
     <div className="overlay-content">
     <Link to="/profile" aria-label="Profile">
       Profile

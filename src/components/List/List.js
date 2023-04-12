@@ -4,7 +4,7 @@ import Checklist  from '../Checklist';
 import Button from '../Button';
 
 
-export default function List({ show, setListInput, list, setList,listInput, val, setTxt, setVal, setShow}) { 
+export default function List({ txt, show, setListInput, list, setList,listInput, val, setTxt, setVal, setShow}) { 
 function removeAll(index){
     const newList = [...list];
     newList[index] =!newList[index]
@@ -79,9 +79,13 @@ function removeAll(index){
       <div className="todoItems">
         <Checklist removeFromList={removeFromList} list={list}/>
       </div>
+
+      <p className='warning'>{txt}</p>
+
       <Form addToList={addToList} show={show} setListInput={setListInput} listInput={listInput} val={val} setVal={setVal}/>
+    
      <Button setShow={setShow} show={show} removeAll={removeAll}/>
-       
+
     </div>
     )
 }

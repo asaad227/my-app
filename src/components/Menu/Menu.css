@@ -1,13 +1,4 @@
-:root {
-  --sky: #b9d5ff;
-  --blue: #3c5e90;
-  --white: #fff;
-  --red: #ff0000;
-  --box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.3);
-  --box-shadow-insert: inset 1px 1px 8px 1px rgba(0, 0, 0, 0.3);
-  --yellow: #ffd159;
-  --light-green: #a3f596;
-}
+
 
 .overlay {
   height: 100%;
@@ -71,5 +62,10 @@
   font-size: 15px;
   cursor: pointer;
   color: rgb(239, 230, 230);
+
+}
+
+.menu{
+  padding-left: 20px;
 
 }

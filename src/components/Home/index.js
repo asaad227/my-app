@@ -1,10 +1,14 @@
+
 import React, {useState, useEffect} from "react";
-import Header from "../Header";
+
 
 import List from "../List/List";
-import { useAuth0 } from "@auth0/auth0-react";
+import Menu from "../Menu";
+// import { useAuth0 } from "@auth0/auth0-react";
 
 const Home = () => {
+  const [time, setTime] = useState();
+  const [date, setDate]= useState();
   const [listInput, setListInput] = useState("");
     const [val, setVal] = useState("");
     const [txt, setTxt] = useState([]);
@@ -13,13 +17,13 @@ const Home = () => {
         const storedList = localStorage.getItem("toDoList");
         return storedList ? JSON.parse(storedList) : [];
       });
-      const { user } = useAuth0();
+      // const { user } = useAuth0();
     
 
-      useEffect(()=>{
-        localStorage.setItem("toDoList", JSON.stringify(list))
+    //   useEffect(()=>{
+    //     localStorage.setItem("toDoList", JSON.stringify(list))
       
-     },[list, user])
+    //  },[list])
 
      function updateItem(){
       let currentDate = new Date();
@@ -81,7 +85,7 @@ const Home = () => {
           }
       }
     
-      return    
+       
     }
 
     useEffect(()=>{
@@ -91,12 +95,24 @@ const Home = () => {
     },)
     
   
+  
+    useEffect(()=>{
+      showTime()
+  })
+      function showTime(){
+          let currentDate = new Date();
+          let time= currentDate.toLocaleTimeString()
+          let date = currentDate.toDateString()
+        setDate(date) 
+        setTime(time)
+         setTimeout(showTime, 1000)
+        }
+  
+  
   return (
     <div>
-      <Header bool={"home"} />
-    
-      <p className='warning'>{txt}</p>
-    
+    <h5 className='digiClock'>{date} {time}</h5>
+    <Menu/>  
    <List txt={txt} setTxt={setTxt} setList={setList} listInput={listInput} setListInput={setListInput} val={val} setVal={setVal} show={show} setShow={setShow} list={list
    }/>
     </div>

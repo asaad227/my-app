@@ -1,15 +1,23 @@
-
+.digiClock{
+  font-family: "Play-fair Display";
+  margin-top: 10px;
+  text-align: center;
+  color: gold;
+}
 .List {
   display: flex;
   flex-direction: column;
     height: 95vh;
     width: 50vh;
     box-shadow: 1px 0px 6px rgba(0,0,0,0.5);
-    padding: 10px;
+    /* padding: 10px; */
 
   }
+
+  
   .label-todo, .label-reminder{
     color: gold;
+    text-align: center;
     font-family: "Delicious Handrawn";
   }
   .warning{
@@ -33,7 +41,7 @@
   .todoItems {
     display: "block";
     height: 85%;
-    padding: 20px 0px;
+    padding: 5px 0px;
   }
   .todoHide{
     display: none;
@@ -52,6 +60,7 @@
     align-items: center;
     border-top: 1px solid gold;
   }
+
   
   .todoInput input {
     text-align: center;
@@ -111,6 +120,26 @@
     from {color: #ebf0e3;;}
     to {color: rgb(255, 0, 0);}
   }
+
+  .delBtn{
+    font-family: "Delicious Handrawn";
+    width: 80%;
+    height: 100%;
+    border:none;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #c93a3a;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+  }
+
+  .delBtn:hover{
+    color: red;
+    background-color: white;
+  }
+
   
   .todoInput button {
     font-family: "Delicious Handrawn";

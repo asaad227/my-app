@@ -14,11 +14,15 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={!isAuthenticated? <SignInPage /> : <Home />}
+          element={!isAuthenticated? <SignInPage />: <Home/>}
+        />
+         <Route
+          path="/home"
+          element={isAuthenticated && <Home />}
         />
         <Route
           path="/profile"
-          element={!isAuthenticated? <SignInPage /> : <Profile />}
+          element={isAuthenticated && <Profile />}
         />
       </Routes>
     </div>
