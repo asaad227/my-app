@@ -3,7 +3,9 @@ import { SignInPage } from "../SignInPage";
 import { Routes, Route} from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import Home from "../Home";
+import Asian from "../Asian";
 import Profile from "../Profile";
+import Fav from "../Fav/Fav";
 
 
 function App() {
@@ -23,6 +25,15 @@ function App() {
         <Route
           path="/profile"
           element={isAuthenticated && <Profile />}
+        />
+         <Route
+          path="/asian"
+          element={isAuthenticated && <Asian />}
+        />
+
+<Route
+          path="/fav"
+          element={isAuthenticated && <Fav />}
         />
       </Routes>
     </div>

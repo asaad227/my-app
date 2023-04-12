@@ -1,8 +1,7 @@
 
 import React, {useState, useEffect} from "react";
-
-
-import List from "../List/List";
+import "./index.css"
+import List from "../List/List"
 import Menu from "../Menu";
 // import { useAuth0 } from "@auth0/auth0-react";
 
@@ -110,7 +109,7 @@ const Home = () => {
   
   
   return (
-    <div>
+    <div className="main-display">
     <h5 className='digiClock'>{date} {time}</h5>
     <Menu/>  
    <List txt={txt} setTxt={setTxt} setList={setList} listInput={listInput} setListInput={setListInput} val={val} setVal={setVal} show={show} setShow={setShow} list={list

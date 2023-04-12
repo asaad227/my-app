@@ -2,6 +2,8 @@ import React from 'react'
 import "./Menu.css"
 import { Link } from 'react-router-dom'
 import SignOutButton from '../SignOutButton'
+import { RiHomeSmileLine } from "react-icons/ri";
+import { MdOutlineFavoriteBorder } from "react-icons/md";
 export default function Menu() {
   function openNav() {
     if (document.getElementById("myNav")) {
@@ -33,6 +35,12 @@ export default function Menu() {
     <Link to="/home" aria-label="home">
     My ToDo 
     </Link>
+    <Link className='navList' to="/asian">
+       Recipe Collection
+          </Link>
+        <Link to="/fav">
+         Fav-recipe
+          </Link>
     <SignOutButton />
   </div>
   </div>

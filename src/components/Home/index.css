@@ -1,0 +1,14 @@
+/* .main-display{
+    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('../../assets//bgimg.jpeg');
+    background-position-x: center;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.digiClock{
+    font-family: "Play-fair Display";
+    padding-top: 5px;
+    text-align: center;
+    color: gold;
+}
