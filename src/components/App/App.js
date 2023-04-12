@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={!isAuthenticated? <SignInPage />: <Home/>}
+          element={!isAuthenticated? <SignInPage />: <Profile/>}
         />
          <Route
           path="/home"
