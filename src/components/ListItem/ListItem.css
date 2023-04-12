@@ -1,5 +1,8 @@
 
+.todoItems li:hover{
+  color: #e9c46a;
 
+}
 .todoItems ul li {
   font-family: "Delicious Handrawn";
     display: flex;

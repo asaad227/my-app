@@ -4,13 +4,17 @@
   flex-direction: column;
     height: 95vh;
     width: 50vh;
-    box-shadow: 1px 0px 6px rgba(0,0,0,0.5);
+    border: 1px solid #b8bfc2;
+  box-shadow: 1px 0px 6px #fefae0;
     padding: 10px;
 
   }
   .label-todo, .label-reminder{
-    color: gold;
+    color: #2a9d8f;
     font-family: "Delicious Handrawn";
+  }
+  .label-todo:hover, .label-reminder:hover{
+    color: #e9c46a;
   }
   .warning{
     font-family: "Delicious Handrawn";
@@ -57,8 +61,8 @@
     text-align: center;
     height: 85%;
     width: 80%;
-    border: none;
-    outline: none;
+    border: 1px solid #b8bfc2;
+  box-shadow: 1px 0px 6px #fefae0;
     border-radius: 5px;
     padding: 7px 0px;
     margin-top: 5px;
@@ -134,7 +138,8 @@
     font-family: "Delicious Handrawn";
     width: 80%;
     height: 100%;
-    border:none;
+    border: 1px solid #b8bfc2;
+    box-shadow: 1px 0px 6px #fefae0;
     cursor: pointer;
     background-color: #8FC93A;
     color: white;

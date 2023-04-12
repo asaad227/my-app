@@ -8,7 +8,9 @@
     --yellow: #ffd159;
     --light-green: #a3f596;
   }
-
+.menuBar{
+  margin-top: 0.5em;
+}
 .profileName {
   margin-top: 1em;
   padding: 0px;

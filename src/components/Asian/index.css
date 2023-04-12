@@ -131,9 +131,9 @@ padding-left: 40px;
   color: red;
 }
 
-.iconNav{
+/* .iconNav{
   color: white;
-}
+} */
 .iconNav:hover{
   color: goldenrod;
   transition: 0.5s;
