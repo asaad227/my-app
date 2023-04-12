@@ -41,16 +41,16 @@ function Asian() {
     e.preventDefault();
     getApi();
   } 
-  function display(e){
-    e.preventDefault();
-     setToggle(!toggle)
-      
-    }
+  const display = (id) => {
+    setToggle((prevState) => ({
+      ...prevState,
+      [id]: !prevState[id],
+    }));
+  };
 
 function fav(index){
 const list = [...data];
 list[index].id = !list[index].id
-
 const finalList = list.filter(e=> !e.id)
 localStorage.setItem("myFav", JSON.stringify(finalList))
 console.log(finalList);
@@ -83,10 +83,10 @@ console.log(finalList);
 </div>
 <button key={index} onClick={()=>fav(index)} className="reBtn"><MdOutlineFavoriteBorder className='iconNav' /></button>
 
-<form onSubmit={display}>
-  <p  className='ingredientPara'>{toggle? e.recipe.ingredientLines: ''}</p>
-  <button className='cuisineInput'>{!toggle? 'Get Ingredient': 'Hide Ingredient'}</button>
-  </form>
+
+  <p  className='ingredientPara'>{toggle[index]? e.recipe.ingredientLines: ''}</p>
+  <button onClick={()=>display(index)} className='cuisineInput'>{!toggle[index]? 'Get Ingredient': 'Hide Ingredient'}</button>
+
  
 <h6 style={{color:'gold'}}>Total time: {e.recipe.totalTime} min</h6>
 </section>)}
