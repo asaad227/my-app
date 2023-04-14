@@ -8,11 +8,12 @@ export default function Menu() {
    
 return (
     <div  className='menuBar'> 
-      <Link to="/home">
-          <li>ToDo</li>
-          </Link>
+      
           <Link to="/">
           <li>Profile</li>
+          </Link>
+          <Link to="/home">
+          <li>ToDo</li>
           </Link>
           <Link to="/asian">
           <li>Recipe</li>

@@ -13,13 +13,13 @@ export default function List() {
     const storedList = localStorage.getItem("toDoList");
     return storedList ? JSON.parse(storedList) : [];
   });
-  function removeAll(index){
+  const removeAll= useCallback((index)=>{
         const newList = [...list];
         newList[index] =!newList[index]
         const removeList = newList.filter(e=> !e);
         setList(removeList)
         localStorage.clear()
-    }
+    },[list])
   const removeFromList = useCallback(
     (index) => {
       //spreeding the list

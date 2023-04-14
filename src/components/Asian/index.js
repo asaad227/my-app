@@ -65,8 +65,7 @@ console.log(finalList);
     <Menu/>
      <form onSubmit ={onSubmit} className='form'>
      <div>
-    
-    <input className='textIn'  onChange={(e)=> {setDishInput(e.target.value)}} type='text' value={dishInput} placeholder='Type main ingredients then select your CUISINE'/>
+    <input className='textIn'  onChange={(e)=> {setDishInput(e.target.value)}} type='text' value={dishInput} placeholder='Enter your recipe search here....'/>
     </div>
    <div>
  <RecipeButtons onClick={(e)=> setCuisineInput(e.target.id)}/>
