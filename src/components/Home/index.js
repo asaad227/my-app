@@ -5,7 +5,7 @@ import './index.css';
 import { useAuth0 } from "@auth0/auth0-react";
 import Menu from '../Menu';
 
-function Home() {
+function Todo() {
   const { isAuthenticated } = useAuth0();
   const timeRef = useRef();
   const dateRef = useRef();
@@ -33,4 +33,4 @@ function Home() {
 }
 
 
-export default Home;
+export default Todo;
