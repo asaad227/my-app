@@ -23,9 +23,6 @@ export default function Menu() {
         <Link to="/">
           <li><i className="fa fa-home"></i></li>
         </Link>
-        <Link to="/profile">
-          <li><i className="fa"></i>Profile</li>
-        </Link>
         <Link to="/todo">
           <li><i className="fa"></i>To-Do</li>
         </Link>
