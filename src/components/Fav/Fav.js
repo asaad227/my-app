@@ -47,6 +47,15 @@ export default function Fav() {
   return (
     isAuthenticated && <div className="recipe-app">
       <Menu />
+      <form className='form'>
+        <div>
+          <input className='textIn'  type='text' placeholder='Find your selected Fav here....' />
+        </div>
+        <div>
+          <button className='cuisineInput'>Search</button>
+
+        </div>
+      </form>
       <div className='flex-container'>
         {data.map((e, index) => <section className='flex-box' key={index}><h4 className='label'>{e.recipe.label}</h4>
           <div>
