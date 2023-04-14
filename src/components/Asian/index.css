@@ -5,14 +5,7 @@
 .recipe-app {
   text-align: center;
 }
-.displayParaFav{
-  font-size: small;
-  border: 2p solid red;
-  background-color: inherit;
-  text-align: justify;
-  padding: 10px 5px 10px 5px;
-  color: aliceblue;
-}
+
 
 .flex-container{
   display: flex;
@@ -21,63 +14,7 @@
   
 }
 
-.flex-box{
-  display: flex;
-  text-align: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-  width: 400px;
-  padding: 10px;
-  padding-top: 10px;
-  background-color: rgb(0 0 0 / 29%);
-  border-radius: 20px;
-  box-shadow: 10px 10px 5px 12px rgb(63 6 6 / 60%);
-  align-items: center;
-  margin: 25px;
-}
-.flex-boxFav{
-  display: flex;
-  text-align: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-  width: 450px;
-  padding: 0px 10px;
-  border-radius: 20px;
-  margin-top: 50px;
-  margin-left: 40px;
-}
 
-.form{
-  display: flex;
-  flex-direction: initial;
-  flex-wrap: wrap;
-  margin-top: 1%;
-
-}
-
-.textIn{
-  width: 250px;
-  box-shadow: 0px 0px 0px 2px white;
-  padding: 10px 5px;
-  margin: 10px 5px;
-  border-radius: 5px;
-  font-size: xx-small;
-}
-
-
-
-.cuisineInput{
-  width: 100px;
-  padding: 10px 5px;
-  margin: 10px 5px;
-  border: 2px solid gold;
-  border-radius: 5px;
-  box-shadow: 0px 0px 0px 2px white;
-  color: rgba(255, 217, 0, 0.562);
-
-}
 .ingredientHide{
   display: var(--para);
  text-align: justify;
@@ -86,34 +23,105 @@
 
 .ingredientPara{
   display: flex;
- text-align: justify;
-  padding: 10px 5px 10px 5px;
+ text-align: start;
+ padding-left:1.5rem ;
+ padding-right: 1rem;
+ font-family: "Roboto","Helvetica","Arial",sans-serif;
+ font-weight: 500;
+ font-size: 0.875rem;
+ line-height: 1.75;
+ letter-spacing: 0.02857em;
+ /* text-transform: uppercase; */
+ color: #f6f6f6;
+  
 }
 
 .label{
-  color: gold;
-  font-size: large;
-  font-style: oblique;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    color: #f6f6f6;
   padding: 5px;
 }
-image{
-  border-radius: 20px;
+.recipe-pic{
+  width: 200px;
+  height: 200px;
+  border-radius: 1rem;
+  border: 1px solid #b8bfc2;
+  box-shadow: 1px 0px 6px #fefae0;
+}
+.cuisineInput{
+  align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    min-width: 60px;
+    padding: 4px 5px;
+    border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    color: #fff;
+    background-color: #1976d2;
+    box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
+}
+
+.textIn{
+  display: inline-flex;
+  margin: 5px;
+  -webkit-box-align: center;
+  align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    background-color: #f6f6f6bc;
+    outline: 0;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    min-width: 64px;
+    padding: 5px 15px;
+    border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border: 1px solid rgba(25, 118, 210, 0.5);
+    color: #1976d2;
 }
 .cuisineInput:hover, .textIn:hover, .submit:hover{
-  color: rgba(255, 255, 255, 0.807);
+  color:#103356;
+  background-color:#f6f6f6; 
   cursor: pointer;
-  font-style: oblique;
   text-transform: uppercase;
-  background-color:rgb(63 6 6 / 60%);
+ 
   transition: 0.7s; 
 }
 .cuisineInput:active{
   background-color: white;
 }
 
-.ingredientPara{
-  color: aliceblue;
-}
+
 
 .favTxt{
   color: gold;
@@ -122,7 +130,7 @@ padding-left: 40px;
 
 }
 .reBtn{
-  float: right;
+justify-content: center;
   margin: 5px 5px;
   background-color: initial;
   border: 2px solid gold;
@@ -142,28 +150,3 @@ padding-left: 40px;
 .reBtn:active{
 background-color: brown;
 }
-@media screen and (max-width: 700px) {
-  .form{
-    justify-content: center;
-  }
-
-  .textIn{
-    padding: 5px 2.5px;
-    margin: 5px 2.5px;
-  }
-  .cuisineInput{
-    font-size: x-small;
-    width: 75px;
-    padding: 5px 2.5px;
-    margin: 5px 2.5px;
-  }
-  
-}
-/* 
-@media screen and (max-width: 500px) {
-  .recipe-app{
-    background-image: url(../../assets/Recipe-asian-app.gif);
-    max-height: 857px;
-  }
-  
-} */

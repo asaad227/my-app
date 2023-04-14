@@ -3,6 +3,8 @@ import './index.css';
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import Menu from '../Menu/index';
 import { useAuth0 } from "@auth0/auth0-react";
+import RecipeButtons from '../Buttons';
+
 
 
 
@@ -58,23 +60,25 @@ localStorage.setItem("myFav", JSON.stringify(finalList))
 console.log(finalList);
 }
  return (
-    isAuthenticated && <div className="recipe-app">
+    isAuthenticated && 
+    <div className="recipe-app">
     <Menu/>
      <form onSubmit ={onSubmit} className='form'>
+     <div>
+    
     <input className='textIn'  onChange={(e)=> {setDishInput(e.target.value)}} type='text' value={dishInput} placeholder='Type main ingredients then select your CUISINE'/>
-   
-   <button id='Indian' className='cuisineInput' type='button' onClick={(e)=> {setCuisineInput(e.target.id)}} >Indian</button>
-   <button id='Chinese' className='cuisineInput' type='button' onClick={(e)=> {setCuisineInput(e.target.id)}} >Chinese </button>
-   <button id='Korean' className='cuisineInput' type='button' onClick={(e)=> {setCuisineInput(e.target.id)}}  >Korean</button>
-   <button id='Asian' className='cuisineInput' type='button' onClick={(e)=> {setCuisineInput(e.target.id)}} >Asian</button>
-   <button className='cuisineInput'>Get Recipe</button>
+    </div>
+   <div>
+ <RecipeButtons onClick={(e)=> setCuisineInput(e.target.id)}/>
+
+   </div>
      </form>
      
  <div className='flex-container'>
 {data.map((e, index)=> <section className='flex-box' key={index}><h4 className='label'>{e.recipe.label}</h4>
 <div>
-<img src={e.recipe.image} width={200} height={200} alt={e.recipe.label}/>
-<h6 style={{color:'gold'}}>Meal type: {e.recipe.mealType}</h6>
+<img className='recipe-pic' src={e.recipe.image} loading='lazy' alt={e.recipe.label}/>
+<h6 className='label'>Meal type: {e.recipe.mealType}</h6>
 </div>
 <button key={index} onClick={()=>fav(index)} className="reBtn"><MdOutlineFavoriteBorder className='iconNav' /></button>
 

@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState} from 'react';
 import { RiDeleteBin5Line } from "react-icons/ri";
+import "./index.css"
 import Menu from '../Menu/index';
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -43,12 +44,12 @@ export default function Fav() {
 //data? will take care of, if nothing on fav list it will show empty page
 //isAuthenticated will checked user allow to use this page 
   return (
-  isAuthenticated &&<div className='App'>
+  isAuthenticated &&<div className="recipe-app">
   <Menu/>
   <div className='flex-container'>
   {data.map((e, index)=> <section className='flex-box' key={index}><h4 className='label'>{e.recipe.label}</h4>
 <div>
-<img src={e.recipe.image} width={200} height={200} alt={e.recipe.label}/>
+<img className='recipe-pic' src={e.recipe.image} width={200} height={200}  alt={e.recipe.label}/>
 <h6 style={{color:'gold'}}>Meal type: {e.recipe.mealType}</h6>
 </div>
 <button onClick={()=>remove(index)} className="reBtn"> <RiDeleteBin5Line/></button>

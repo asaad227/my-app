@@ -9,8 +9,12 @@
 }
 .menuBar li{
   margin-left: 1rem;
-  font-size: 1rem;
-  font-family: "Delicious Handrawn";
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
   color: #2a9d8f;
   display: flex; /* Display block instead of inline */
  

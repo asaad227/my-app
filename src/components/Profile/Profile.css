@@ -1,19 +1,20 @@
-:root {
-    --sky: #b9d5ff;
-    --blue: #3c5e90;
-    --white: #fff;
-    --red: #ff0000;
-    --box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.3);
-    --box-shadow-insert: inset 1px 1px 8px 1px rgba(0, 0, 0, 0.3);
-    --yellow: #ffd159;
-    --light-green: #a3f596;
-  }
+
 .menuBar{
   margin-top: 0.5em;
 }
 .profileName {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  color: #2a9d8f;
   margin-top: 1em;
   padding: 0px;
+}
+.profileName:hover{
+  color: #e9c46a;
 }
 .profilePic {
   border-radius: 50%;

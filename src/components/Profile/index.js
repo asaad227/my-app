@@ -16,7 +16,7 @@ const Profile = () => {
       <div className="">
       <Menu/>
       <div className="profile">
-        <img className="profilePic" src={user.picture} alt={user.name} />
+        {/* <img className="profilePic" src={user.picture} alt={user.name} /> */}
         <h1 className="profileName">{user.name}</h1>
       </div>
       </div>
