@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState, useCallback, lazy } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import ListItem from '../ListItem/ListItem';
 import Placeholder from '../Placeholder/Placeholder';
 import './List.css'
