@@ -5,7 +5,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import Asian from "../Asian";
 import Profile from "../Profile";
 import Fav from "../Fav/Fav";
-import Home from "../Home";
+import Todo from "../Todo";
 
 function App() {
   const { isAuthenticated } = useAuth0();
@@ -14,8 +14,8 @@ function App() {
     <div>
       <Routes>
         <Route
-          path="/home"
-          element={ <Home />}
+          path="/todo"
+          element={ <Todo />}
         />
         <Route
           path="/"
