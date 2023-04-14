@@ -10,9 +10,9 @@ return (
     <div  className='menuBar'> 
       
           <Link to="/">
-          <li>Profile</li>
-          </Link>
-          <Link to="/home">
+          <li><i className="fa fa-home"></i></li>
+        </Link>
+          <Link to="/todo">
           <li>ToDo</li>
           </Link>
           <Link to="/asian">
