@@ -21,7 +21,7 @@ function Home() {
     }, []);
   
     return (
-      isAuthenticated && <div className='app'>
+      isAuthenticated && <div>
       <Menu/>
         <h5 className='digiClock'>
           <span ref={dateRef}></span> <span ref={timeRef}></span>

@@ -5,13 +5,18 @@
     height: 95vh;
     width: 50vh;
     border: 1px solid #b8bfc2;
-  box-shadow: 1px 0px 6px #fefae0;
+  box-shadow: 1px 0px 6px white;
     padding: 10px;
 
   }
   .label-todo, .label-reminder{
-    color: #2a9d8f;
-    font-family: "Delicious Handrawn";
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    color: black;
   }
   .label-todo:hover, .label-reminder:hover{
     color: #e9c46a;
@@ -66,7 +71,13 @@
     border-radius: 5px;
     padding: 7px 0px;
     margin-top: 5px;
-    font-family: "Delicious Handrawn";
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    color: black;
     
   }
 .displayDiv{
@@ -78,7 +89,10 @@
   
 
   .btn1{
-    font-family: "Delicious Handrawn";
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
     margin-top: 67px;
     width: 80%;
     height: 100%;
@@ -95,7 +109,10 @@
   
   }
   .btn2{
-    font-family: "Delicious Handrawn";
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
     width: 80%;
     height: 100%;
     border:none;
@@ -112,7 +129,10 @@
   }
 
   .delBtn{
-    font-family: "Delicious Handrawn";
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
     width: 80%;
     height: 100%;
     border:none;
@@ -135,7 +155,10 @@
   }
   
   .todoInput button {
-    font-family: "Delicious Handrawn";
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
     width: 80%;
     height: 100%;
     border: 1px solid #b8bfc2;

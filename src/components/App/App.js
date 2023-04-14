@@ -11,7 +11,7 @@ function App() {
   const { isAuthenticated } = useAuth0();
 
   return (
-    <div className="App">
+    <div>
       <Routes>
         <Route
           path="/home"

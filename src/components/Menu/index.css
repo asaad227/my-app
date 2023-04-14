@@ -2,7 +2,7 @@
   display: -webkit-inline-flex;
   width: 50vh;
   border: 1px solid #b8bfc2;
-  box-shadow: 1px 0px 6px #fefae0;
+  box-shadow: 1px 0px 6px white;
   padding: 0.5rem;
   align-items: center;
  
@@ -15,7 +15,7 @@
   letter-spacing: 0.02857em;
   text-transform: uppercase;
   font-family: "Roboto","Helvetica","Arial",sans-serif;
-  color: #2a9d8f;
+  color: black;
   display: flex; /* Display block instead of inline */
  
   

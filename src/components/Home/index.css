@@ -7,8 +7,14 @@
 } */
 
 .digiClock{
-    font-family: "Play-fair Display";
+    font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  color: black;
     padding-top: 5px;
     text-align: center;
-    color: gold;
+   
 }

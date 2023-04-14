@@ -42,7 +42,7 @@ export default function List() {
       return <Placeholder/>
     } else {
       return  list.map((item, index) => (
-        <ListItem
+        <ListItem 
           checkStatus={item.checked}
           deleteHandler={removeFromList}
           index={index}
