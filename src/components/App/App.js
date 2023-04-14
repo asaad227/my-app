@@ -5,7 +5,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import Asian from "../Asian";
 import Profile from "../Profile";
 import Fav from "../Fav/Fav";
-import Todo from "../Home";
+import Todo from "../Todo/index"
 
 function App() {
   const { isAuthenticated } = useAuth0();
