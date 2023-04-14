@@ -1,13 +1,5 @@
-.menuBar{
-  display: -webkit-inline-flex;
-  width: 50vh;
-  border: 1px solid #b8bfc2;
-  box-shadow: 1px 0px 6px white;
-  padding: 0.5rem;
-  align-items: center;
- 
-}
-.menuBar li{
+li {
+  display: flex;
   margin-left: 1rem;
   font-weight: 500;
   font-size: 0.875rem;
@@ -16,15 +8,64 @@
   text-transform: uppercase;
   font-family: "Roboto","Helvetica","Arial",sans-serif;
   color: black;
-  display: flex; /* Display block instead of inline */
- 
-  
 }
 
-.menuBar a{
+.sidepanel {
+  width: 0;
+  position: absolute;
+  z-index: 1;
+  height: auto;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.7s;
+  padding-top: 50px;
+  background-color: #84c4d4;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  color:#0000;
+  display: flex;
+  transition: width 0.5s;
+}
+
+.sidepanel a:hover {
+  color: gold;
+  transition: 1s ease-out;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 16px;
+  padding-bottom: 5px;
+  color: #000;
+}
+
+.openbtn {
+  display: flex;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #84c4d4;
+  border: none;
+  padding-top: 20px;
+  padding-left: 10px;
+  color: #000;
+}
+
+.openbtn:hover {
+  color: bisque;
+  transition: 1s ease-out;
+}
+a{
   text-decoration: none;
 }
-
-.menuBar li:hover{
-  color: #e9c46a;
+@media screen and (max-width: 768px) {
+  .openbtn{
+    padding-right: 5px;
+  }
 }
