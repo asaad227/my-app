@@ -9,21 +9,22 @@ export default function Nav() {
 return (
     <div  className='menuBar'> 
       
-          <Link to="/">
-          <li><i className="fa fa-home"></i></li>
+          <Link className='menuLink' to="/">
+          <i className="fa fa-home"></i>
         </Link>
-          <Link to="/todo">
-          <li>ToDo</li>
+          <Link  className='menuLink' to="/todo">
+          ToDo
           </Link>
-          <Link to="/asian">
-          <li>Recipe</li>
+          <Link  className='menuLink' to="/asian">
+          Recipe
           </Link>
-          <Link to="/fav">
-          <li>Fav</li>
+          <Link  className='menuLink' to="/fav">
+          <i class="fa fa-heart" aria-hidden="true"></i>
           </Link>
-          <li>
-          <SignOutButton/>
-          </li>
+          <div className='menuLink'>
+          <i class="fa fa-sign-out" aria-hidden="true"><SignOutButton/></i>
+          </div>
+          
           
   </div>
 )

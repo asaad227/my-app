@@ -30,9 +30,9 @@ export default function Menu() {
           <li><i className="fa"></i>Recipe</li>
         </Link>
         <Link to="/fav">
-          <li><i className="fa"></i>Fav</li>
+          <li><i className="fa fa-heart"></i></li>
         </Link>
-        <li>
+        <li className='fa fa-sign-out'>
           <SignOutButton />
         </li>
 

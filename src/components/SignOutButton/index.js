@@ -7,9 +7,9 @@ const SignOutButton = () => {
 
   return (
  
-    <li href={window.location.origin} onClick={() => logout({ returnTo: window.location.origin })}>
-      Sign Out
-    </li>
+    <div href={window.location.origin} onClick={() => logout({ returnTo: window.location.origin })}>
+     
+    </div>
    
   );
 };
