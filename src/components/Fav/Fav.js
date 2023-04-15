@@ -8,7 +8,8 @@ import Menu from '../Menu';
 
 export default function Fav() {
   const { isAuthenticated } = useAuth0();
-  const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(false);
+
   const [data, setData] = useState(() => {
     const storedList = localStorage.getItem("myFav");
     return storedList ? JSON.parse(storedList) : [];
@@ -35,6 +36,11 @@ export default function Fav() {
     }));
   };
 
+ function removeAllFav(e){
+  localStorage.removeItem("myFav", JSON.stringify(e))
+  setData([])
+ }
+
 
 
 
@@ -47,15 +53,15 @@ export default function Fav() {
   return (
     isAuthenticated && <div className="recipe-app">
       <Menu />
-      <form className='form'>
+      
+      <div className='form'>
         <div>
-          <input className='textIn'  type='text' placeholder='Find your selected Fav here....' />
+          <h3>Find your selected recipe below: </h3>
         </div>
-        <div>
-          <button className='cuisineInput'>Search</button>
-
-        </div>
-      </form>
+     
+          
+      
+      </div>
       <div className='flex-container'>
         {data.map((e, index) => <section className='flex-box' key={index}><h4 className='label'>{e.recipe.label}</h4>
           <div>
@@ -74,7 +80,9 @@ export default function Fav() {
         </section>)}
 
       </div>
-
+      <div>
+      <button onClick={()=>removeAllFav(data)} className='remove-Allfav'>Remove All</button>
+      </div>
     </div>
   )
 }
