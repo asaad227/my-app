@@ -7,15 +7,23 @@
 }
 
 .name-app {
-  font-size: 7rem;
-  font-weight: 350;
+
+  font-size: 5rem;
   margin: 0px;
-  margin-bottom: 20vh;
+  /* margin-bottom: 20vh; */
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
 }
 
 .welcome-title {
+  
   font-size: 2.5rem;
   margin-top: 30vh;
-  font-weight: 200;
   margin-bottom: 0px;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
 }

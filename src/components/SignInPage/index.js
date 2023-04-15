@@ -9,7 +9,7 @@ export function SignInPage() {
     return (
     <div className="SignInPage">
       <h3 className="welcome-title"> Welcome to </h3>
-      <h1 className="name-app"> My Todo </h1>
+      <h1 className="name-app"> My App </h1>
         <SignInButton/>
      
     </div>
