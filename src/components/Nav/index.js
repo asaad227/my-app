@@ -22,7 +22,7 @@ return (
           <i class="fa fa-heart" aria-hidden="true"></i>
           </Link>
           <div className='menuLink'>
-          <i class="fa fa-sign-out" aria-hidden="true"><SignOutButton/></i>
+          <SignOutButton/>
           </div>
           
           
