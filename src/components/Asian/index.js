@@ -13,7 +13,8 @@ function Asian() {
   const { isAuthenticated } = useAuth0();
   const [dishInput, setDishInput] = useState('');
   const [cuisineInput, setCuisineInput] = useState('');
-  const [toggle, setToggle] = useState(false)
+  const [show, setShow] = useState(false)
+
   const [data, setData] = useState(() => {
     const storedList = localStorage.getItem("myRecipe");
     return storedList ? JSON.parse(storedList) : [];
@@ -47,7 +48,7 @@ function Asian() {
     getApi();
   }
   const display = (id) => {
-    setToggle((prevState) => ({
+    setShow((prevState) => ({
       ...prevState,
       [id]: !prevState[id],
     }));
@@ -60,6 +61,34 @@ function Asian() {
     localStorage.setItem("myFav", JSON.stringify(finalList))
     console.log(finalList);
   }
+
+  function checklist(){
+    if(data.length === 0){
+      return(<div>
+        <p>Please fetch the data</p>
+      </div>)
+    }else{
+     return (data.map((e, index)=> <section className='flex-box' key={index}>
+     
+       <h4 className='label'>{e.recipe.label}</h4>
+       <button key={index} onClick={() => fav(index)} className="reBtn"> <i class="fa fa-heart iconNav" aria-hidden="true"></i></button>
+       
+       <div>
+      <img src={e.recipe.image} className='recipe-pic' alt={e.recipe.label}/>
+      </div>
+    <button className='ingredientBtn' onClick={()=> display(index)}>{show[index]? "Hide Ingredients":"Show Ingredients"}</button>
+     <p >{show[index]? e.recipe.ingredients.map((x,i)=>{
+  return(<div>
+    <ul  className="ingredientPara" key={i}><li>{x.text}</li></ul>
+    </div>)
+     })
+  :""}</p>
+      
+     
+      </section>))
+    }
+   }
+
   return (
     isAuthenticated &&
     <div className="recipe-app">
@@ -75,20 +104,7 @@ function Asian() {
       </form>
 
       <div className='flex-container'>
-        {data.map((e, index) => <section className='flex-box' key={index}><h4 className='label'>{e.recipe.label}</h4>
-          <div>
-            <img className='recipe-pic' src={e.recipe.image} loading='lazy' alt={e.recipe.label} />
-            <h6 className='label'>Meal type: {e.recipe.mealType}</h6>
-          </div>
-          <button key={index} onClick={() => fav(index)} className="reBtn"><MdOutlineFavoriteBorder className='iconNav' /></button>
-
-
-          <p className='ingredientPara'>{toggle[index] ? e.recipe.ingredientLines : ''}</p>
-          <button onClick={() => display(index)} className='cuisineInput'>{!toggle[index] ? 'Get Ingredient' : 'Hide Ingredient'}</button>
-
-
-          <h6 style={{ color: 'gold' }}>Total time: {e.recipe.totalTime} min</h6>
-        </section>)}
+      {checklist()}
       </div>
     </div>
   );
