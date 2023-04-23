@@ -13,23 +13,12 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route
-          path="/todo"
-          element={ <Todo />}
-        />
-        <Route
-          path="/"
-          element={isAuthenticated ? <Profile /> : <SignInPage />}
-        />
-        <Route
-          path="/asian"
-          element={<Asian />}
-        />
-        <Route
-          path="/fav"
-          element={<Fav />}
-        />
-      </Routes>
+      <Route path="/" element={!isAuthenticated? <SignInPage/>:<Profile />}/>
+      <Route path="asian" element={<Asian />}/>
+      <Route path="fav" element={<Fav />} />
+      <Route path="*" element={<h1>404 Not Found</h1>} />
+      <Route path='todo' element={<Todo />} />
+    </Routes>
     </div>
   );
 }

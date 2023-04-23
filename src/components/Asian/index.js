@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import './index.css';
-import { MdOutlineFavoriteBorder } from "react-icons/md";
-
-import { useAuth0 } from "@auth0/auth0-react";
 import RecipeButtons from '../Buttons';
 import Menu from '../Menu';
 
@@ -10,7 +7,6 @@ import Menu from '../Menu';
 
 
 function Asian() {
-  const { isAuthenticated } = useAuth0();
   const [dishInput, setDishInput] = useState('');
   const [cuisineInput, setCuisineInput] = useState('');
   const [show, setShow] = useState(false)
@@ -71,10 +67,11 @@ function Asian() {
      return (data.map((e, index)=> <section className='flex-box' key={index}>
      
        <h4 className='label'>{e.recipe.label}</h4>
-       <button key={index} onClick={() => fav(index)} className="reBtn"> <i class="fa fa-heart iconNav" aria-hidden="true"></i></button>
        
-       <div>
+       <div className='favImg'>
       <img src={e.recipe.image} className='recipe-pic' alt={e.recipe.label}/>
+      <p className='caloriesApi'>Calories: {e.recipe.calories.toFixed(0)} kcals</p>
+      <button key={index} onClick={() => fav(index)} className="reBtn"> <i class="fa fa-heart iconNav" aria-hidden="true"></i></button>
       </div>
     <button className='ingredientBtn' onClick={()=> display(index)}>{show[index]? "Hide Ingredients":"Show Ingredients"}</button>
      <p >{show[index]? e.recipe.ingredients.map((x,i)=>{
@@ -90,9 +87,11 @@ function Asian() {
    }
 
   return (
-    isAuthenticated &&
+    <div>
+     <Menu/>
+  
     <div className="recipe-app">
-      <Menu />
+   
       <form onSubmit={onSubmit} className='form'>
         <div>
           <input className='textIn' onChange={(e) => { setDishInput(e.target.value) }} type='text' value={dishInput} placeholder='Enter your recipe search here....' />
@@ -106,6 +105,7 @@ function Asian() {
       <div className='flex-container'>
       {checklist()}
       </div>
+    </div>
     </div>
   );
 }

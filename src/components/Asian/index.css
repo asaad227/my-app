@@ -1,36 +1,39 @@
-
-
-.recipe-app {
+.recipe-app{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
+  align-items: center;
+  /* border: 1px solid white;
+  box-shadow: 1px 0px 6px #b8bfc2; */
 }
-
-
 .flex-container{
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  
-}
+  text-align: center;
+  /* border: 1px solid white;
+  box-shadow: 1px 0px 6px #b8bfc2; */
+  width: 90vw;
+  height: auto;
+  margin: 10px auto;
 
+}
+.caloriesApi{
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.02857em;
+}
 
 
 
 .ingredientPara{
 display: flex;
- text-align: start;
  font-family: "Roboto","Helvetica","Arial",sans-serif;
  font-weight: 500;
  font-size: 0.875rem;
- line-height: 1.75;
  letter-spacing: 0.02857em;
- padding: 5px;
- border: 1px solid #b8bfc2;
- box-shadow: 1px 0px 6px #fefae0;
- /* text-transform: uppercase; */ 
+ text-transform: uppercase; 
 }
 
 .label{
@@ -102,7 +105,7 @@ display: flex;
     text-transform: uppercase;
     min-width: 64px;
     padding: 5px 15px;
-    border-radius: 4px;
+    border-radius: 1rem;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     border: 1px solid rgba(25, 118, 210, 0.5);
     color: #1976d2;
@@ -120,7 +123,6 @@ display: flex;
 }
 
 
-
 .favTxt{
 color: gold;
 padding-top: 50px ;
@@ -130,19 +132,20 @@ padding-left: 40px;
 .reBtn{
 justify-content: center;
   margin: 5px 5px;
-  background-color: initial;
-  border: 2px solid gold;
-  border-radius: 5px;
-  box-shadow: 0px 0px 0px 2px white;
-  color: red;
+  background-color: #a2ebff;
+border: none;
+  /* border-radius: 5px;
+  border: 1px solid #b8bfc2;
+  box-shadow: 1px 0px 6px #fefae0; */
 }
 
-
-.iconNav:hover{
-  color: goldenrod;
-  transition: 0.5s;
+.fa-heart{
+  color: red;
+  font-size: 1rem;
   cursor: pointer;
 }
+
+
 .reBtn:active{
 background-color: rgb(42, 165, 56);
 }

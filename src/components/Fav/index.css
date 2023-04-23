@@ -5,6 +5,18 @@
 .hide{
     display: none;
 }
+
+.favImg{
+  display: inline;
+}
+
+.recipe-fav{
+    width: 80vw;
+    height: 75vh;
+    border-radius: 1rem;
+    border: 1px solid #b8bfc2;
+    box-shadow: 1px 0px 6px #fefae0;
+  } 
 .remove-Allfav{
     align-items: center;
       -webkit-box-pack: center;
@@ -15,6 +27,7 @@
       border: 0;
       margin-left: 5px;
       margin-top: 30vh;
+      bottom: 5px;
       cursor: pointer;
       user-select: none;
       vertical-align: middle;
@@ -37,3 +50,21 @@
     color:#d24a19;
     background-color: #fff;
   }
+
+  .fa-heart{
+    color: #d24a19;
+  }
+
+  .favDiv{
+    width: 100vw;
+    height: 90vh;
+    padding-left:10px ;
+
+  }
+
+
+  @media screen and (min-width: 768px) {
+    
+  }
+    
+  

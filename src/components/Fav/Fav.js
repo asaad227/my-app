@@ -1,14 +1,13 @@
+import React, {useState, useEffect} from "react";
+import FavPicHome from "../../assets/Recipe-asian-app.gif";
+import "./index.css";
+import Menu from "../Menu";
 
-import React, { useEffect, useState } from 'react';
-import { RiDeleteBin5Line } from "react-icons/ri";
-import "./index.css"
 
-import { useAuth0 } from "@auth0/auth0-react";
-import Menu from '../Menu';
+
 
 export default function Fav() {
-  const { isAuthenticated } = useAuth0();
-  const [toggle, setToggle] = useState(false);
+  const [show, setShow] = useState(false);
 
   const [data, setData] = useState(() => {
     const storedList = localStorage.getItem("myFav");
@@ -30,7 +29,7 @@ export default function Fav() {
   }
 
   const display = (id) => {
-    setToggle((prevState) => ({
+    setShow((prevState) => ({
       ...prevState,
       [id]: !prevState[id],
     }));
@@ -41,6 +40,41 @@ export default function Fav() {
   setData([])
  }
 
+ function checklist(){
+  if(data.length === 0){
+    return(<div className="favDiv">
+      <h5>Nothing on the <i className="fa fa-heart" aria-hidden="true"></i> list. Add some from the Home!!!</h5>
+    <img src={FavPicHome} className="recipe-fav" alt="Recipe-home"/>
+    </div>)
+  }else{
+   return (
+    <div>
+    {data.map((e, index)=> <section className='flex-box' key={index}>
+   
+     <h4 className='label'>{e.recipe.label}</h4>
+     
+     
+     <div className="favImg">
+    <img src={e.recipe.image} className='recipe-pic' alt={e.recipe.label}/>
+    <p className='caloriesApi'>Calories: {e.recipe.calories.toFixed(0)} kcals</p>
+    <button key={index} onClick={() => remove(index)} className="reBtn"> <i class="fa fa-trash iconNav" aria-hidden="true"></i></button>
+    </div>
+  <button className='ingredientBtn' onClick={()=> display(index)}>{show[index]? "Hide Ingredients":"Show Ingredients"}</button>
+   <p >{show[index]? e.recipe.ingredients.map((x,i)=>{
+return(<div>
+  <ul  className="ingredientPara" key={i}><li>{x.text}</li></ul>
+  </div>)
+   })
+:""}</p>
+    
+   
+    </section>)}
+    <div>
+      <button onClick={()=>removeAllFav(data)} className='remove-Allfav'>Remove All</button>
+      </div>
+    </div>)
+  }
+ }
 
 
 
@@ -51,38 +85,17 @@ export default function Fav() {
   //data? will take care of, if nothing on fav list it will show empty page
   //isAuthenticated will checked user allow to use this page 
   return (
-    isAuthenticated && <div className="recipe-app">
-      <Menu />
-      
-      <div className='form'>
-        <div>
-          <h3>Find your selected recipe below: </h3>
-        </div>
-     
-          
-      
-      </div>
+    <div>
+ <Menu/>
+<div className="recipe-app">
+      <h1 className="fav-title">My <i className="fa fa-heart" aria-hidden="true"></i> List</h1>
       <div className='flex-container'>
-        {data.map((e, index) => <section className='flex-box' key={index}><h4 className='label'>{e.recipe.label}</h4>
-          <div>
-            <img className='recipe-pic' src={e.recipe.image} width={200} height={200} alt={e.recipe.label} />
-            <h6 style={{ color: 'gold' }}>Meal type: {e.recipe.mealType}</h6>
-          </div>
-          <button onClick={() => remove(index)} className="reBtn"> <RiDeleteBin5Line /></button>
-
-
-          <p className='ingredientPara'>{toggle[index] ? e.recipe.ingredientLines : ''}</p>
-          <button onClick={() => display(index)} className='cuisineInput'>{!toggle[index] ? 'Get Ingredient' : 'Hide Ingredient'}</button>
-
-
-
-          <h6 style={{ color: 'gold' }}>Total time: {e.recipe.totalTime} min</h6>
-        </section>)}
+      {checklist()}
 
       </div>
-      <div>
-      <button onClick={()=>removeAllFav(data)} className='remove-Allfav'>Remove All</button>
-      </div>
+      
+    </div>
     </div>
   )
 }
+

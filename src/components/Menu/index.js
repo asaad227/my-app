@@ -32,7 +32,7 @@ export default function Menu() {
         <Link to="/fav">
           <li><i className="fa fa-heart"></i></li>
         </Link>
-        <li className='fa fa-sign-out'>
+        <li>
           <SignOutButton />
         </li>
 

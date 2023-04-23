@@ -27,8 +27,10 @@ function Todo() {
       <h5 className='digiClock'>
         <span ref={dateRef}></span> <span ref={timeRef}></span>
       </h5>
+      <h1 className='todoTitle'>To Do List</h1>
       <List />
-    </div>
+      </div>
+    
   );
 }
 
