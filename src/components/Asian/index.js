@@ -88,7 +88,9 @@ function Asian() {
 
   return (
     <div>
+    <div className='header'>
      <Menu/>
+    </div>
   
     <div className="recipe-app">
    
@@ -96,7 +98,7 @@ function Asian() {
         <div>
           <input className='textIn' onChange={(e) => { setDishInput(e.target.value) }} type='text' value={dishInput} placeholder='Enter your recipe search here....' />
         </div>
-        <div>
+        <div className='btn'>
           <RecipeButtons onClick={(e) => setCuisineInput(e.target.id)} />
 
         </div>

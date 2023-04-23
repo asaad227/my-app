@@ -9,10 +9,12 @@ li {
   font-family: "Roboto","Helvetica","Arial",sans-serif;
   color: black;
 }
-
+.fa-bars{
+  position: fixed;
+}
 .sidepanel {
   width: 0;
-  position: absolute;
+  position: fixed;
   z-index: 1;
   height: auto;
   top: 0;
@@ -48,6 +50,7 @@ li {
 
 .openbtn {
   display: flex;
+  position: fixed;
   font-size: 16px;
   cursor: pointer;
   background-color: #84c4d4;

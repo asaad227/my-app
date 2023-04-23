@@ -38,7 +38,7 @@ export default function Menu() {
 
       </div>
       <button className="openbtn" onClick={openNav}>
-        <i className='fa'>☰</i></button>
+        <i className='fa fa-bars'></i></button>
 
     </div>
   )

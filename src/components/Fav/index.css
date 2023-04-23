@@ -9,7 +9,9 @@
 .favImg{
   display: inline;
 }
-
+.fav-title{
+  margin: 3rem 0 0 0;
+}
 .recipe-fav{
     width: 80vw;
     height: 75vh;
