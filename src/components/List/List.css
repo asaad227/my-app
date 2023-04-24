@@ -44,7 +44,7 @@
   .todoItems {
     display: "block";
     height: 85%;
-    padding: 20px 0px;
+    padding: 10px 0px;
   }
   .todoHide{
     display: none;

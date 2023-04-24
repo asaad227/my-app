@@ -169,7 +169,7 @@ export default function List() {
       <form className={!show?"todoInput":"todoHide"} >
         <input onChange={e => setListInput(e.target.value)} value={listInput} type="text" placeholder='Enter your todo here ...' />
         
-        <h4 className='label-reminder'>Add Reminder</h4>
+        {/* <h4 className='label-reminder'>Add Reminder</h4> */}
         <input onChange={e => setVal(e.target.value)} value={val} type="datetime-local" placeholder='date and time' />
         
         <button onClick={addToList} type='submit'>Add</button>

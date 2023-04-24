@@ -24,7 +24,7 @@ export default function Menu() {
           <li><i className="fa fa-home"></i></li>
         </Link>
         <Link to="/todo">
-          <li><i className="fa fa-tasks" aria-hidden="true"> My To-Do</i></li>
+          <li>ToDo<i className="fa fa-tasks" aria-hidden="true"></i></li>
         </Link>
         {/* <Link to="/asian">
           <li><i className="fa"></i>Recipe</li>
@@ -33,12 +33,12 @@ export default function Menu() {
           <li><i className="fa fa-heart"></i></li>
         </Link> */}
         <div className='recipeIcon'>
-        <a href="https://asian-recipe.vercel.app/" target="_blank" rel="noreferrer"> <i class="fa fa-cutlery" aria-hidden="true"> Recipe-App</i> </a>
+        <a href="https://asian-recipe.vercel.app/" target="_blank" rel="noreferrer"> Recipe App  <i class="fa fa-cutlery" aria-hidden="true"></i> </a>
         </div>
-        <div className='signoutIcon'>
+        
           <SignOutButton/>
           
-</div>
+
       </div>
       <button className="openbtn" onClick={openNav}>
         <i className='fa fa-bars'></i></button>

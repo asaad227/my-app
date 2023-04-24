@@ -29,7 +29,7 @@ const Profile = () => {
   return (
 
     isAuthenticated && (
-      <div className="">
+      <div>
         <Nav/>
         <h5 className='digiClock'>
           <span ref={dateRef}></span> <span ref={timeRef}></span>
