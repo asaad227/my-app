@@ -2,8 +2,9 @@
 .List {
   display: flex;
   flex-direction: column;
-    height: 95vh;
-    width:50vh;
+  align-items: center;
+  height: 95vh;
+  width:95vw;
   border: 1px solid #b8bfc2;
   box-shadow: 1px 0px 6px white;
     padding: 10px;
@@ -59,6 +60,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 25vw;
     border-top: 1px solid gold;
   }
   
@@ -83,6 +85,7 @@
 .displayDiv{
   display: flex;
   flex-direction: column;
+  width: 25vw;
   align-items: center;
   padding: 5px 0px;
 }
@@ -184,3 +187,26 @@
 
 
  
+@media screen and (max-width: 768px) {
+  .List {
+    width: 95vw;
+  }
+ 
+  .todoInput {
+    width: 100vw;
+    border-top: none;
+  }
+  .todoInput input {
+    width: 90%;
+  }
+  .todoInput button {
+    width: 90%;
+  }
+  .btn1, .btn2, .delBtn{
+    width: 90%;
+  }
+  .displayDiv{
+    width: 100vw;
+  }
+}
+  

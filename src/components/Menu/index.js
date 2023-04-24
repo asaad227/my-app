@@ -7,8 +7,8 @@ import SignOutButton from '../SignOutButton';
 export default function Menu() {
 
   function openNav() {
-    document.getElementById("mySidepanel").style.width = "200px";
-    document.getElementById("mySidepanel").style.height = "700px";
+    document.getElementById("mySidepanel").style.width = "100vw";
+    document.getElementById("mySidepanel").style.height = "100vh";
   }
   function closeNav() {
     document.getElementById("mySidepanel").style.width = "0";
@@ -24,7 +24,7 @@ export default function Menu() {
           <li><i className="fa fa-home"></i></li>
         </Link>
         <Link to="/todo">
-          <li><i className="fa fa-tasks" aria-hidden="true"></i>My To-Do</li>
+          <li><i className="fa fa-tasks" aria-hidden="true"> My To-Do</i></li>
         </Link>
         {/* <Link to="/asian">
           <li><i className="fa"></i>Recipe</li>
@@ -32,13 +32,13 @@ export default function Menu() {
         <Link to="/fav">
           <li><i className="fa fa-heart"></i></li>
         </Link> */}
-        <div>
-        <a href="https://asian-recipe.vercel.app/" target="_blank" rel="noreferrer"> <i class="fa fa-cutlery" aria-hidden="true"></i> My Recipe App</a>
+        <div className='recipeIcon'>
+        <a href="https://asian-recipe.vercel.app/" target="_blank" rel="noreferrer"> <i class="fa fa-cutlery" aria-hidden="true"> My Recipe App</i> </a>
         </div>
-        <div>
-          <SignOutButton />
-        </div>
-
+        <div className='signoutIcon'>
+          <SignOutButton/>
+          
+</div>
       </div>
       <button className="openbtn" onClick={openNav}>
         <i className='fa fa-bars'></i></button>

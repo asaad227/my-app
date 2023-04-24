@@ -11,7 +11,28 @@ li {
 }
 .fa-bars{
   position: fixed;
+  top: 0;
+  padding-top: 5px;
+  color: #121515;
+ 
 }
+
+.fa-home{
+  color: green;
+  padding: 5px;
+  border: 1px solid #b8bfc2;
+  box-shadow: 1px 0px 6px white;
+}
+.recipeIcon{
+  padding-left: 1rem;
+}
+.signoutIcon{
+  padding-left:3rem;
+  color: red;
+ 
+}
+
+
 .sidepanel {
   width: 0;
   position: fixed;
@@ -33,7 +54,7 @@ li {
   transition: width 0.5s;
 }
 
-.sidepanel a:hover {
+.sidepanel a:hover, .fa-sign-out:hover,.fa-cutlery:hover, .fa-tasks:hover, .fa-home:hover {
   color: gold;
   transition: 1s ease-out;
 }

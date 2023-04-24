@@ -3,6 +3,8 @@
   color: #e9c46a;
 
 }
+
+
 .todoItems ul li {
   font-family: "Delicious Handrawn";
     display: flex;
@@ -31,6 +33,7 @@ color: rgb(26, 59, 63);
   
   .todoItems ul {
     margin-bottom: 5px;
+    width: 25vw;
   }
   
   .todoItems ul li input {
@@ -44,3 +47,11 @@ color: rgb(26, 59, 63);
     background-color: #8FC93A;
     border: 1px solid red;
   }
+
+  @media screen and (max-width: 768px) {
+    .todoItems ul {
+      width:90vw;
+    }
+  }
+    
+  
