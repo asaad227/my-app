@@ -12,7 +12,7 @@ li {
 .fa-bars{
   position: fixed;
   top: 0;
-  padding-top: 5px;
+  padding-top: 1rem;
   color: #121515;
  
 }
@@ -75,8 +75,8 @@ li {
   cursor: pointer;
   background-color: #84c4d4;
   border: none;
-  padding-top: 20px;
-  padding-left: 10px;
+  /* padding-top: 20px;
+  padding-left: 10px; */
   color: #000;
 }
 
@@ -88,8 +88,12 @@ a{
   text-decoration: none;
   color: black;
 }
+
+
 @media screen and (max-width: 768px) {
   .openbtn{
     padding-right: 5px;
   }
+
+ 
 }

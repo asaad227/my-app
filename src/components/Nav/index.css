@@ -1,6 +1,7 @@
 .menuBar{
   display: -webkit-inline-flex;
   width: 100vw;
+  height: 5vh;
   border: 1px solid #b8bfc2;
   box-shadow: 1px 0px 6px white;
   padding: 0.5rem;

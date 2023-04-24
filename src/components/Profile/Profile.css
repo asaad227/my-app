@@ -23,7 +23,7 @@
   image-rendering: crisp-edges;
 }
 .profile {
-height: 50vh;
+height: 60vh;
   display: flex;
   margin-bottom: 150px;
   flex-direction: column;

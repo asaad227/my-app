@@ -7,7 +7,7 @@ import SignOutButton from '../SignOutButton';
 export default function Menu() {
 
   function openNav() {
-    document.getElementById("mySidepanel").style.width = "100vw";
+    document.getElementById("mySidepanel").style.width = "65vw";
     document.getElementById("mySidepanel").style.height = "100vh";
   }
   function closeNav() {
