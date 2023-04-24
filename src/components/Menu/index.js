@@ -33,7 +33,7 @@ export default function Menu() {
           <li><i className="fa fa-heart"></i></li>
         </Link> */}
         <div className='recipeIcon'>
-        <a href="https://asian-recipe.vercel.app/" target="_blank" rel="noreferrer"> <i class="fa fa-cutlery" aria-hidden="true"> My Recipe App</i> </a>
+        <a href="https://asian-recipe.vercel.app/" target="_blank" rel="noreferrer"> <i class="fa fa-cutlery" aria-hidden="true"> Recipe-App</i> </a>
         </div>
         <div className='signoutIcon'>
           <SignOutButton/>
