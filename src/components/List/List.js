@@ -71,7 +71,7 @@ export default function List() {
     }
     //this if clause not going to allow anymore txt to added to the list when list
     // less then 6.
-    if(list.length > 5){
+    if(list.length > 3){
       alert("Maximum entry entered. Please delete one then add one!!")
     }else{
       newList.push(newListItem);
