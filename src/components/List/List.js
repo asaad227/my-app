@@ -167,7 +167,6 @@ export default function List() {
      
    
       <form className={!show?"todoInput":"todoHide"} >
-      <h4 className='label-todo'>ToDo List</h4>
         <input onChange={e => setListInput(e.target.value)} value={listInput} type="text" placeholder='Enter your todo here ...' />
         
         <h4 className='label-reminder'>Add Reminder</h4>
