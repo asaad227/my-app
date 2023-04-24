@@ -13,14 +13,18 @@ return (
           <i className="fa fa-home"></i>
         </Link>
           <Link  className='menuLink' to="/todo">
-          ToDo
+          <i class="fa fa-tasks" aria-hidden="true"> My To-Do</i>
           </Link>
-          <Link  className='menuLink' to="/asian">
+          {/* <Link  className='menuLink' to="/asian">
           Recipe
           </Link>
           <Link  className='menuLink' to="/fav">
           <i class="fa fa-heart" aria-hidden="true"></i>
-          </Link>
+          </Link> */}
+          <div className='menuLink'>
+        <a href="https://asian-recipe.vercel.app/" target="_blank" rel="noreferrer"> <i class="fa fa-cutlery" aria-hidden="true"> My Recipe App</i> </a>
+        </div>
+          
           <div className='menuLink'>
           <SignOutButton/>
           </div>

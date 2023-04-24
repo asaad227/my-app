@@ -1,6 +1,6 @@
 .menuBar{
   display: -webkit-inline-flex;
-  width: 50vh;
+  width: 100vw;
   border: 1px solid #b8bfc2;
   box-shadow: 1px 0px 6px white;
   padding: 0.5rem;
@@ -31,3 +31,10 @@
 .menuBar li:hover{
   color: #e9c46a;
 }
+
+/* @media (max-width: 768px){
+  .menuBar{
+    width: 50vw;
+  }
+} */
+  

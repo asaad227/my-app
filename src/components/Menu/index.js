@@ -24,17 +24,20 @@ export default function Menu() {
           <li><i className="fa fa-home"></i></li>
         </Link>
         <Link to="/todo">
-          <li><i className="fa"></i>To-Do</li>
+          <li><i className="fa fa-tasks" aria-hidden="true"></i>My To-Do</li>
         </Link>
-        <Link to="/asian">
+        {/* <Link to="/asian">
           <li><i className="fa"></i>Recipe</li>
         </Link>
         <Link to="/fav">
           <li><i className="fa fa-heart"></i></li>
-        </Link>
-        <li>
+        </Link> */}
+        <div>
+        <a href="https://asian-recipe.vercel.app/" target="_blank" rel="noreferrer"> <i class="fa fa-cutlery" aria-hidden="true"></i> My Recipe App</a>
+        </div>
+        <div>
           <SignOutButton />
-        </li>
+        </div>
 
       </div>
       <button className="openbtn" onClick={openNav}>

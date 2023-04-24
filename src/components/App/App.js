@@ -14,8 +14,8 @@ function App() {
     <div>
       <Routes>
       <Route path="/" element={!isAuthenticated? <SignInPage/>:<Profile />}/>
-      <Route path="asian" element={<Asian />}/>
-      <Route path="fav" element={<Fav />} />
+      {/* <Route path="asian" element={<Asian />}/>
+      <Route path="fav" element={<Fav />} /> */}
       <Route path="*" element={<h1>404 Not Found</h1>} />
       <Route path='todo' element={<Todo />} />
     </Routes>
