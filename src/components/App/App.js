@@ -6,6 +6,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import Profile from "../Profile";
 // import Fav from "../Fav/Fav";
 import Todo from "../Todo/index"
+import SocialLink from "../Social-links";
 
 function App() {
   const { isAuthenticated } = useAuth0();
@@ -19,6 +20,7 @@ function App() {
       <Route path="*" element={<h1>404 Not Found</h1>} />
       <Route path='todo' element={<Todo />} />
     </Routes>
+    <SocialLink />
     </div>
   );
 }

@@ -23,8 +23,9 @@
   image-rendering: crisp-edges;
 }
 .profile {
-  margin-top: 3em;
+height: 50vh;
   display: flex;
+  margin-bottom: 150px;
   flex-direction: column;
   align-items: center;
   justify-content: center;

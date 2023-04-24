@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import SocialLink from "../Social-links";
 import { useAuth0 } from "@auth0/auth0-react";
 
 import logo from "../../assets/logo.svg"
@@ -39,6 +40,7 @@ const Profile = () => {
           <h1 className="profileName">{user.name}</h1>
           <img src={logo} alt="App-logo" className="App-logo" />
         </div>
+       
       </div>
     )
   );
