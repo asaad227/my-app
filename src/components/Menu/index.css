@@ -9,13 +9,13 @@ li {
   font-family: "Roboto","Helvetica","Arial",sans-serif;
   color: black;
 }
-.fa-bars{
+/* .fa-bars{
   position: fixed;
   top: 0;
   padding-top: 1rem;
   color: #121515;
  
-}
+} */
 
 .fa-home{
   color: green;
@@ -70,7 +70,7 @@ li {
 
 .openbtn {
   display: flex;
-  position: fixed;
+  position: relative;
   font-size: 16px;
   cursor: pointer;
   background-color: #84c4d4;

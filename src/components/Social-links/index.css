@@ -1,9 +1,6 @@
 .social-links {
 display: flex;
 justify-content: center;
-bottom: 0;
-padding-top: 20px;
-padding-bottom: 10px;
 font-size: 12px;
 gap: 20px;
   }

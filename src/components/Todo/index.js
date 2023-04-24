@@ -3,7 +3,7 @@ import List from "../List/List"
 import './index.css';
 
 import { useAuth0 } from "@auth0/auth0-react";
-import Menu from '../Menu';
+import Nav from '../Nav';
 
 function Todo() {
   const { isAuthenticated } = useAuth0();
@@ -22,13 +22,14 @@ function Todo() {
   }, []);
 
   return (
-    isAuthenticated && <div>
+    isAuthenticated && <div className='mainDiv'>
    
-      <Menu />
      
-      <h5 className='digiClock'>
+     
+      <div className='digiClock'>
+      <Nav/>
         <span ref={dateRef}></span> <span ref={timeRef}></span>
-      </h5>
+      </div>
       <List />
       </div>
     

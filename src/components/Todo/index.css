@@ -14,7 +14,10 @@
   text-transform: uppercase;
   font-family: "Roboto","Helvetica","Arial",sans-serif;
   color: black;
-    padding-top: 5px;
     text-align: center;
    
+}
+
+.mainDiv{
+  height: 95vh;
 }
