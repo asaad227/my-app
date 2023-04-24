@@ -22,7 +22,7 @@ return (
           <i class="fa fa-heart" aria-hidden="true"></i>
           </Link> */}
           <div className='menuLink'>
-        <a href="https://asian-recipe.vercel.app/" target="_blank" rel="noreferrer"> <i class="fa fa-cutlery" aria-hidden="true"> My Recipe App</i> </a>
+        <a href="https://asian-recipe.vercel.app/" target="_blank" rel="noreferrer"> <i class="fa fa-cutlery" aria-hidden="true"> Recipe-App</i> </a>
         </div>
           
           <div className='menuLink'>
