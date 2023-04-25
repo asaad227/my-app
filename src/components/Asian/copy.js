@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import './index.css';
 import RecipeButtons from '../Buttons';
-import Nav from '../Nav';
+import Menu from '../Menu';
 
 
 
 
-
-function App() {
+function Asian() {
   const [dishInput, setDishInput] = useState('');
   const [cuisineInput, setCuisineInput] = useState('');
   const [show, setShow] = useState(false)
@@ -61,14 +60,12 @@ function App() {
 
   function checklist(){
     if(data.length === 0){
-      return(<div className='flex-fetch'>
+      return(<div>
         <p>Please fetch the data</p>
       </div>)
     }else{
-     return (data.map((e, index)=> 
-     <div className='flex-container'>
-     <section className='flex-box' key={index}>
-      
+     return (data.map((e, index)=> <section className='flex-box' key={index}>
+     
        <h4 className='label'>{e.recipe.label}</h4>
        
        <div className='favImg'>
@@ -80,18 +77,20 @@ function App() {
      <p >{show[index]? e.recipe.ingredients.map((x,i)=>{
   return(<div>
     <ul  className="ingredientPara" key={i}><li>{x.text}</li></ul>
-    </div>
-    )
-    })
+    </div>)
+     })
   :""}</p>
-      </section></div>
-      ))
+      
+     
+      </section>))
     }
    }
 
   return (
     <div>
-       <Nav/>
+    <div className='header'>
+     <Menu/>
+    </div>
   
     <div className="recipe-app">
    
@@ -99,18 +98,18 @@ function App() {
         <div>
           <input className='textIn' onChange={(e) => { setDishInput(e.target.value) }} type='text' value={dishInput} placeholder='Enter your recipe search here....' />
         </div>
-        <div>
+        <div className='btn'>
           <RecipeButtons onClick={(e) => setCuisineInput(e.target.id)} />
 
         </div>
       </form>
 
-     
+      <div className='flex-container'>
       {checklist()}
-
+      </div>
     </div>
     </div>
   );
 }
 
-export default App;
+export default Asian;

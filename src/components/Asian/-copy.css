@@ -1,9 +1,13 @@
+.header{
+ margin-bottom: 10px;
+}
+
 .recipe-app{
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid white;
-  box-shadow: 1px 0px 6px #b8bfc2;
+  /* border: 1px solid white;
+  box-shadow: 1px 0px 6px #b8bfc2; */
 }
 .flex-container{
   display: flex;
@@ -11,8 +15,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  border: 1px solid white;
-  box-shadow: 1px 0px 6px #b8bfc2;
+  /* border: 1px solid white;
+  box-shadow: 1px 0px 6px #b8bfc2; */
   width: 90vw;
   height: auto;
   margin: 10px auto;
@@ -23,19 +27,6 @@
   font-weight: 500;
   font-size: 0.875rem;
   letter-spacing: 0.02857em;
-}
-
-.flex-fetch{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border: 1px solid white;
-  box-shadow: 1px 0px 6px #b8bfc2;
-  width: 90vw;
-  height: 65vh;
-  margin: 10px auto;
 }
 
 
@@ -94,10 +85,14 @@ display: flex;
     box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
 }
 
+.btn{
+  margin: 0.5rem;
+}
 .textIn{
   display: inline-flex;
   width: 17.9rem;
-  margin: 7px;
+  margin: 3rem 1rem 1rem 1rem;
+
   -webkit-box-align: center;
   align-items: center;
     -webkit-box-pack: center;
@@ -145,7 +140,7 @@ padding-left: 40px;
 .reBtn{
 justify-content: center;
   margin: 5px 5px;
-  background-color: #a2ebff;
+  background-color: #84c4d4;
 border: none;
   /* border-radius: 5px;
   border: 1px solid #b8bfc2;

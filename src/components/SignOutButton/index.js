@@ -9,7 +9,7 @@ const SignOutButton = () => {
  
     <div className="sign-outBtn" href={window.location.origin} onClick={() => logout({ returnTo: window.location.origin })}>
      
-          Exit <i class="fa fa-sign-out" aria-hidden="true"></i>
+         <i class="fa fa-sign-out" aria-hidden="true"></i> Exit 
          
     </div>
    

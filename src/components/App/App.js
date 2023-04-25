@@ -2,11 +2,12 @@ import "./App.css";
 import { SignInPage } from "../SignInPage";
 import { Routes, Route} from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
-// import Asian from "../Asian";
+import Asian from "../Asian";
 import Profile from "../Profile";
-// import Fav from "../Fav/Fav";
+import Fav from "../Fav/Fav";
 import Todo from "../Todo/index"
 import SocialLink from "../Social-links";
+import CaloreCounter from "../Calories";
 
 function App() {
   const { isAuthenticated } = useAuth0();
@@ -15,10 +16,11 @@ function App() {
     <div>
       <Routes>
       <Route path="/" element={!isAuthenticated? <SignInPage/>:<Profile />}/>
-      {/* <Route path="asian" element={<Asian />}/>
-      <Route path="fav" element={<Fav />} /> */}
+      <Route path="asian" element={<Asian />}/>
+      <Route path="fav" element={<Fav />} />
       <Route path="*" element={<h1>404 Not Found</h1>} />
       <Route path='todo' element={<Todo />} />
+      <Route path='calories' element={<CaloreCounter />} />
     </Routes>
     <SocialLink />
     </div>

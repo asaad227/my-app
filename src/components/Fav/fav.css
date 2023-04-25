@@ -9,10 +9,12 @@
 .favImg{
   display: inline;
 }
-
+.fav-title{
+  margin: 3rem 0 0 0;
+}
 .recipe-fav{
     width: 80vw;
-    height:65vh;
+    height: 75vh;
     border-radius: 1rem;
     border: 1px solid #b8bfc2;
     box-shadow: 1px 0px 6px #fefae0;
@@ -56,8 +58,8 @@
   }
 
   .favDiv{
-  
-    height: 82vh;
+    width: 100vw;
+    height: 90vh;
     padding-left:10px ;
 
   }

@@ -1,9 +1,7 @@
 import React, {useState, useEffect} from "react";
 import FavPicHome from "../../assets/Recipe-asian-app.gif";
 import "./index.css";
-
-import Nav from "../Nav";
-
+import Menu from "../Menu";
 
 
 
@@ -51,7 +49,6 @@ export default function Fav() {
   }else{
    return (
     <div>
-     <h5>Here your <i className="fa fa-heart" aria-hidden="true"></i> list below: </h5>
     {data.map((e, index)=> <section className='flex-box' key={index}>
    
      <h4 className='label'>{e.recipe.label}</h4>
@@ -89,9 +86,9 @@ return(<div>
   //isAuthenticated will checked user allow to use this page 
   return (
     <div>
-<Nav/>
+ <Menu/>
 <div className="recipe-app">
-
+      <h1 className="fav-title">My <i className="fa fa-heart" aria-hidden="true"></i> List</h1>
       <div className='flex-container'>
       {checklist()}
 
