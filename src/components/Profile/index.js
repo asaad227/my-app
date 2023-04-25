@@ -38,7 +38,7 @@ const Profile = () => {
 
           {/* <img className="profilePic" src={user.picture} alt={user.name} /> */}
           <h1 className="profileName">{user.name}</h1>
-          <img src={logo} alt="App-logo" className="App-logo" />
+          <img src={logo} id="main" className="App-logo" alt="logo" />
         </div>
        
       </div>

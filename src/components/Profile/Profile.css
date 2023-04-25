@@ -12,9 +12,11 @@
   color: black;
   margin-top: 1em;
   padding: 0px;
+
 }
 .profileName:hover{
   color: #e9c46a;
+
 }
 .profilePic {
   border-radius: 50%;
@@ -33,9 +35,9 @@ height: 60vh;
 
 
 .App-logo {
-  color: black;
   height: 40vmin;
-  pointer-events: none;
+  cursor: pointer;
+ 
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -49,4 +51,8 @@ height: 60vh;
   to {
     transform: rotate(360deg);
   }
+}
+
+img:hover{
+  color: black;
 }
