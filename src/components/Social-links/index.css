@@ -2,7 +2,7 @@
 display: flex;
 justify-content: center;
 bottom: 0;
-width: 100%;
+width: 100vw;
 padding-top: 20px;
 padding-bottom: 10px;
 font-size: 12px;
