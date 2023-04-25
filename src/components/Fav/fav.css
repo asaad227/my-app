@@ -13,8 +13,8 @@
   margin: 3rem 0 0 0;
 }
 .recipe-fav{
-    width: 80vw;
-    height: 75vh;
+    width: 40vw;
+    height: 32vh;
     border-radius: 1rem;
     border: 1px solid #b8bfc2;
     box-shadow: 1px 0px 6px #fefae0;
@@ -65,8 +65,12 @@
   }
 
 
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 768px) {
+    .recipe-fav{
+      width: 80vw;
+      height: 75vh;
     
+    } 
   }
     
   
