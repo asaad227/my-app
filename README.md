@@ -1,4 +1,4 @@
-# Todo and Recipe App with Auth0
+# My App with Auth0
 This is a Todo and Recipe app built using Auth0, React JS, CSS, JavaScript, Material UI, and Google Fonts. The app allows users to create a list of todos with or without reminder options. Additionally, users can search for recipes and save their favorite recipes to a favorites section.
 
 The app also utilizes local storage to store the user's todos and favorites recipes so that they can access them later.
@@ -10,6 +10,7 @@ The app also utilizes local storage to store the user's todos and favorites reci
 <li>Search for recipes of choice</li>
 <li>Save favorite recipes to the favorites section</li>
 <li>Local storage to store todos and favorite recipes</li>
+<li>Calories Calculator</li>
 <li>User-friendly interface using Material UI and Google Fonts</li>
 </ul>
 
@@ -28,7 +29,7 @@ The app also utilizes local storage to store the user's todos and favorites reci
 ### Deploy:
 <ul>
     <h3>App has been deploy at vercal, please find the app link below:</h3>
-    <li>https://todo-reminder-two.vercel.app</li>
+    <li>https://my-reminder-recipe.vercel.app/</li>
 </ul> 
 
 ###  Getting Started
