@@ -22,7 +22,10 @@ function App() {
       <Route path='todo' element={<Todo />} />
       <Route path='calories' element={<CaloreCounter />} />
     </Routes>
+    <div className="socialLinksIcon">
     <SocialLink />
+    </div>
+ 
     </div>
   );
 }

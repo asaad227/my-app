@@ -24,16 +24,16 @@ export default function Menu() {
           <li><i className="fa fa-home"></i></li>
         </Link>
         <Link to="/todo">
-          <li><i className="fa fa-tasks" aria-hidden="true"></i>ToDo</li>
+          <li><i className="fa fa-tasks" aria-hidden="true"></i> ToDo</li>
         </Link>
         <Link to="/asian">
-          <li><i className="fa fa-cutlery"></i>Recipe</li>
+          <li><i className="fa fa-cutlery"></i> Recipe</li>
         </Link>
         <Link to="/fav">
-          <li><i className="fa fa-heart"></i>Favorite Recipe</li>
+          <li><i className="fa fa-heart"></i> Favourite Recipe</li>
         </Link>
         <Link to="/calories">
-        <li><i className="fa fa-calculator" aria-hidden="true"></i>Calorie Calculator</li>
+        <li><i className="fa fa-calculator" aria-hidden="true"></i> Calorie Calculator</li>
         </Link>
         {/* <div className='recipeIcon'>
         <a href="https://asian-recipe.vercel.app/" target="_blank" rel="noreferrer"> Recipe App  <i class="fa fa-cutlery" aria-hidden="true"></i> </a>

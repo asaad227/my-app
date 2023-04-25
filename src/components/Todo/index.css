@@ -7,17 +7,17 @@
 } */
 
 .digiClock{
-    font-weight: 500;
-  font-size: 0.875rem;
-  line-height: 1.75;
-  letter-spacing: 0.02857em;
-  text-transform: uppercase;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
-  color: black;
+  font-weight: 500;
+    font-size: 0.875rem;
+    /* line-height: 1.75; */
+    letter-spacing: 0.02857em;
+    /* text-transform: uppercase; */
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    color: black;
     text-align: center;
    
 }
 
 .mainDiv{
-  height: 97vh;
+  height: 90vh;
 }

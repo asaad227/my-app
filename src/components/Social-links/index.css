@@ -1,10 +1,18 @@
 .social-links {
 display: flex;
 justify-content: center;
+bottom: 0;
+padding-top: 20px;
+padding-bottom: 10px;
 font-size: 12px;
 gap: 20px;
+border: 1px solid #b8bfc2;
+box-shadow: 1px 0px 6px white;
   }
 
+  .social-links i{
+    margin-bottom: 5px;
+  }
   .fa {
     font-size: large;
     color: black;
